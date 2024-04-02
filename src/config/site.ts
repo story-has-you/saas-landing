@@ -2,7 +2,7 @@ import { SiteConfig } from "@/types/site-config";
 import { type Metadata, type Viewport } from "next";
 
 export const siteConfig: SiteConfig = {
-  title: "Re-NextJS-Template",
+  title: "saas-landing",
   description: "",
   url: process.env.NEXT_PUBLIC_BASE_URL!,
   useGoogleAnalytics: false,
