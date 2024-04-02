@@ -1,0 +1,46 @@
+{
+    "HomePage": {
+        "title": "Re-NextJS-Template",
+        "description": "Personalized nextjs project starter template"
+    },
+    "MainNav": {
+        "home": "Home"
+    },
+    "Login": {
+        "cardTitle": "Login",
+        "cardDescription": "Enter your email below to login to your account",
+        "emailLabel": "Email",
+        "emailPlaceholder": "m@example.com",
+        "passwordLabel": "Password",
+        "forgotPasswordLink": "Forgot your password?",
+        "loginButton": "Login",
+        "googleLoginButton": "Login with Google",
+        "signupPrompt": "Don't have an account?",
+        "signupLink": "Sign up"
+    },
+    "Signup": {
+        "cardTitle": "Sign Up",
+        "cardDescription": "Enter your information to create an account",
+        "firstNameLabel": "First name",
+        "firstNamePlaceholder": "Max",
+        "lastNameLabel": "Last name",
+        "lastNamePlaceholder": "Robinson",
+        "emailLabel": "Email",
+        "emailPlaceholder": "m@example.com",
+        "passwordLabel": "Password",
+        "createAccountButton": "Create an account",
+        "gitHubSignupButton": "Sign up with GitHub",
+        "signinPrompt": "Already have an account?",
+        "signinLink": "Sign in"
+    },
+    "Header": {
+        "login": "Login",
+        "logout": "Logout"
+    },
+    "Form": {
+        "generate": "Generate"
+    },
+    "FAQ": {
+        "title": "Frequently asked questions"
+    }
+}

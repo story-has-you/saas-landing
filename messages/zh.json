@@ -1,0 +1,46 @@
+{
+    "HomePage": {
+        "title": "Re-NextJS-Template",
+        "description": "NextJS 模板"
+    },
+    "MainNav": {
+        "home": "首页"
+    },
+    "Login": {
+        "cardTitle": "登录",
+        "cardDescription": "在下方输入您的电子邮件以登录您的账户",
+        "emailLabel": "电子邮件",
+        "emailPlaceholder": "m@example.com",
+        "passwordLabel": "密码",
+        "forgotPasswordLink": "忘记密码？",
+        "loginButton": "登录",
+        "googleLoginButton": "使用Google登录",
+        "signupPrompt": "还没有账户？",
+        "signupLink": "注册"
+    },
+    "Signup": {
+        "cardTitle": "注册",
+        "cardDescription": "输入您的信息以创建一个账户",
+        "firstNameLabel": "名字",
+        "firstNamePlaceholder": "张",
+        "lastNameLabel": "姓氏",
+        "lastNamePlaceholder": "伟",
+        "emailLabel": "电子邮件",
+        "emailPlaceholder": "m@example.com",
+        "passwordLabel": "密码",
+        "createAccountButton": "创建账户",
+        "gitHubSignupButton": "使用GitHub注册",
+        "signinPrompt": "已有账户？",
+        "signinLink": "登录"
+    },
+    "Header": {
+        "login": "登录",
+        "logout": "注销"
+    },
+    "Form": {
+        "generate": "生成"
+    },
+    "FAQ": {
+        "title": "常见问题"
+    }
+}
