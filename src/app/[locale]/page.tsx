@@ -6,11 +6,8 @@ import { Hero } from "@/components/hero";
 import { Navigation } from "@/components/navigation";
 import { Pricing } from "@/components/pricing";
 import { Supplier } from "@/components/supplier";
-import { localeConfig } from "@/config/locale";
 
 export default async function HomePage() {
-  const { homePage, form, login } = await localeConfig.buildLanguages();
-
   return (
     <div className="absolute w-full flex flex-col">
       <Banner />
@@ -22,7 +19,7 @@ export default async function HomePage() {
         <Navigation />
         <Hero />
       </div>
-      <div className="mt-20 flex flex-col gap-20">
+      <div className="mt-20 flex flex-col gap-32">
         <Supplier />
         <Features />
         <Pricing />

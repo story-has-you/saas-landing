@@ -1,6 +1,9 @@
+"use client";
+
 import { Fonts } from "@/components/fonts";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export function Hero() {
@@ -16,22 +19,42 @@ export function Hero() {
               and celebrate your successes.
             </Fonts.bodyLarge>
             <div className="flex flex-row justify-center items-center p-0 gap-2.5 rounded-none">
-              <Button className="rounded-xl">Get started</Button>
+              <motion.div
+                whileHover={{
+                  scale: 1.1,
+                  transition: { duration: 1 },
+                }}
+              >
+                <Button className="rounded-xl">Get started</Button>
+              </motion.div>
               <p>Learn more</p>
             </div>
           </div>
         </div>
-        <div className="w-full h-[598px] max-w-[600px]">
+
+        <motion.div
+          className="w-full h-[598px] max-w-[600px]"
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
           <Image src={"/images/shape-holo-1.png"} height={697} width={697} alt="shape-holo-1" />
-        </div>
+        </motion.div>
 
-        <div className="absolute top-32 left-96 z-10">
+        <motion.div
+          className="absolute top-32 left-96 z-10"
+          animate={{ x: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
           <Image src={"/images/shape-holo-2.png"} height={236} width={236} alt="shape-holo-2" />
-        </div>
+        </motion.div>
 
-        <div className="absolute top-[800px] right-0 rotate-45 z-10">
+        <motion.div
+          className="absolute top-[800px] right-16 rotate-45 z-10"
+          animate={{ x: [0, -10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
           <Image src={"/images/shape-holo-3.png"} height={243} width={243} alt="shape-holo-2" />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

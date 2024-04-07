@@ -1,3 +1,5 @@
+"use client";
+
 import { Fonts } from "@/components/fonts";
 import { Icons } from "@/components/icons";
 
