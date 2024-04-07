@@ -3,6 +3,36 @@ import { Icons } from "@/components/icons";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
+const freeFeatures = [
+  "Up to 5 project members",
+  "Unlimited tasks and projects",
+  "2 GB storage",
+  "Integrations",
+  "Basic support",
+];
+const proFeatures = [
+  "Up to 50 project members",
+  "Unlimited tasks and projects",
+  "50 GB storage",
+  "Integrations",
+  "Priority support",
+  "Advanced analytics",
+  "Export capabilities",
+];
+
+const businessFeatures = [
+  "Unlimited project members",
+  "Unlimited tasks and projects",
+  "200 GB storage",
+  "Integrations",
+  "Dedicated account manager",
+  "Custom fields",
+  "Advanced analytics",
+  "Export capabilities",
+  "API access",
+  "Advanced security features",
+];
+
 export function Pricing() {
   return (
     <div className="flex flex-col items-center justify-center gap-10">
@@ -21,25 +51,12 @@ export function Pricing() {
           </p>
           <Button className="w-full">Get started for free</Button>
           <ul className="mt-5 space-y-5 text-start">
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Up to 5 project members
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Unlimited tasks and projects
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />2 GB storage
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Integrations
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Basic support
-            </li>
+            {freeFeatures.map((feature) => (
+              <li key={feature} className="flex flex-row justify-start items-center">
+                <Icons.check className="text-green-500 mr-2" />
+                {feature}
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -58,34 +75,12 @@ export function Pricing() {
             Sign up now
           </Button>
           <ul className="mt-5 space-y-5 text-start">
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Up to 50 project members
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Unlimited tasks and projects
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              50 GB storage
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Integrations
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Priority support
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Advanced analytics
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Export capabilities
-            </li>
+            {proFeatures.map((feature) => (
+              <li key={feature} className="flex flex-row justify-start items-center">
+                <Icons.check className="text-green-500 mr-2" />
+                {feature}
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -97,46 +92,12 @@ export function Pricing() {
           </p>
           <Button className="w-full">Sign up now</Button>
           <ul className="mt-5 space-y-5 text-start">
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Unlimited project members
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Unlimited tasks and projects
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              200 GB storage
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Integrations
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Dedicated account manager
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Custom fields
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Advanced analytics
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Export capabilities
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              API access
-            </li>
-            <li className="flex flex-row justify-start items-center">
-              <Icons.check className="w-5 h-5" />
-              Advanced security features
-            </li>
+            {businessFeatures.map((feature) => (
+              <li key={feature} className="flex flex-row justify-start items-center">
+                <Icons.check className="text-green-500 mr-2" />
+                {feature}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

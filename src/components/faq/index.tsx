@@ -1,6 +1,5 @@
 import { Fonts } from "@/components/fonts";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { localeConfig } from "@/config/locale";
 
 const faqs = [
   {
@@ -26,10 +25,9 @@ const faqs = [
 ];
 
 export async function FAQ() {
-  const { faq } = await localeConfig.buildLanguages();
   return (
     <div className="flex flex-col items-center justify-center w-full gap-14">
-      <h2 className="text-3xl text-center">{faq.title}</h2>
+      <h2 className="text-3xl text-center">FAQs</h2>
       <div className="w-1/2">
         <Accordion type="single" collapsible>
           {faqs.map((item, index) => (
