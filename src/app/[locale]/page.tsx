@@ -6,6 +6,7 @@ import { Hero } from "@/components/hero";
 import { Navigation } from "@/components/navigation";
 import { Pricing } from "@/components/pricing";
 import { Supplier } from "@/components/supplier";
+import { Testimonials } from "@/components/testimonials";
 
 export default async function HomePage() {
   return (
@@ -22,6 +23,7 @@ export default async function HomePage() {
       <div className="mt-20 flex flex-col gap-32">
         <Supplier />
         <Features />
+        <Testimonials />
         <Pricing />
         <FAQ />
         <Footer />
