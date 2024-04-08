@@ -1,25 +1,9 @@
-import {
-  CheckIcon,
-  ChevronDownIcon,
-  GitHubLogoIcon,
-  GlobeIcon,
-  LightningBoltIcon,
-  MoonIcon,
-  SunIcon,
-  TwitterLogoIcon,
-} from "@radix-ui/react-icons";
-import { type IconProps } from "@radix-ui/react-icons/dist/types";
-
+import { SVGProps } from "react";
+import { FaBoltLightning, FaCheck } from "react-icons/fa6";
 export const Icons = {
-  sun: SunIcon,
-  moon: MoonIcon,
-  globe: GlobeIcon,
-  twitter: TwitterLogoIcon,
-  gitHub: GitHubLogoIcon,
-  chevronDown: ChevronDownIcon,
-  lightning: LightningBoltIcon,
-  check: CheckIcon,
-  logo: (props: IconProps) => (
+  lightning: FaBoltLightning,
+  check: FaCheck,
+  logo: (props: SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <path
         fill="currentColor"
@@ -27,7 +11,7 @@ export const Icons = {
       />
     </svg>
   ),
-  google: (props: IconProps) => (
+  google: (props: SVGProps<SVGSVGElement>) => (
     <svg viewBox="0 0 1024 1024" {...props} xmlns="http://www.w3.org/2000/svg" p-id="4258">
       <path
         d="M214.101333 512c0-32.512 5.546667-63.701333 15.36-92.928L57.173333 290.218667A491.861333 491.861333 0 0 0 4.693333 512c0 79.701333 18.858667 154.88 52.394667 221.610667l172.202667-129.066667A290.56 290.56 0 0 1 214.101333 512"
@@ -51,7 +35,7 @@ export const Icons = {
       ></path>
     </svg>
   ),
-  acmeCorp: (props: IconProps) => (
+  acmeCorp: (props: SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" {...props}>
       <g>
         <path d="M 0 0 L 26 0 L 26 26 L 0 26 Z" fill="transparent"></path>
@@ -62,7 +46,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  quantum: (props: IconProps) => (
+  quantum: (props: SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" {...props}>
       <g>
         <path d="M 0 0 L 26 0 L 26 26 L 0 26 Z" fill="transparent"></path>
@@ -73,7 +57,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  echoValley: (props: IconProps) => (
+  echoValley: (props: SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" {...props}>
       <g>
         <path d="M 0 0 L 22 0 L 22 22 L 0 22 Z" fill="transparent"></path>
@@ -84,7 +68,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  apex: (props: IconProps) => (
+  apex: (props: SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" {...props}>
       <g transform="translate(0 0)">
         <path d="M 0 0 L 24 0 L 24 24 L 0 24 Z" fill="transparent"></path>
@@ -95,7 +79,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  celestial: (props: IconProps) => (
+  celestial: (props: SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" {...props}>
       <g>
         <path d="M 0 0 L 24 0 L 24 24 L 0 24 Z" fill="transparent"></path>
