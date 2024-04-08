@@ -56,7 +56,7 @@ export function Footer() {
         <FooterProducts />
         <div className="flex space-x-2">
           <div>{`©${currentYear}`}</div>{" "}
-          <Link href={author.twitter || author.href} target="_blank">
+          <Link href={author.twitter || author.github} target="_blank">
             {author.name}
           </Link>{" "}
           <div>All rights reserved.</div>

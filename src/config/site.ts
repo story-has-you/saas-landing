@@ -18,8 +18,8 @@ export const siteConfig: SiteConfig = {
   ],
   keywords: ["Next.js", "Radix UI", "Tailwind CSS", "Shadcn UI"],
   author: {
-    name: "reavid",
-    href: "https://github.com/story-has-you",
+    name: "ReAvid",
+    github: "https://github.com/story-has-you",
     twitter: "https://twitter.com/reavid",
   },
   products: [

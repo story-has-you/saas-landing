@@ -12,7 +12,7 @@ export interface SiteConfig {
   products?: Product[];
   author: {
     name: string;
-    href: string;
+    github: string;
     twitter: string;
   };
 }
