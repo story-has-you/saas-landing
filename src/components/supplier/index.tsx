@@ -31,7 +31,7 @@ export function Supplier() {
     <div className="flex flex-col gap-8 justify-center items-center w-full">
       <Fonts.bodySmall className="opacity-50">Trusted by the world’s most innovative teams</Fonts.bodySmall>
       <div className="flex flex-row opacity-50 w-full">
-        <div className="flex flex-row justify-center items-center w-full gap-12">
+        <div className="flex flex-row justify-center items-center w-full gap-20">
           {suppliers.map((item) => (
             <div key={item.name} className="flex flex-row justify-center items-center gap-2">
               {item.icon}
