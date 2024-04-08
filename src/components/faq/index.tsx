@@ -63,7 +63,10 @@ const faqs = [
 export async function FAQ() {
   return (
     <div className="flex flex-col items-center justify-center w-full gap-14">
-      <h2 className="text-3xl text-center">FAQs</h2>
+      <div className="flex flex-col gap-5">
+        <Fonts.h2>FAQs</Fonts.h2>
+        <Fonts.bodyLarge className="opacity-50">Here are some of the most frequently asked questions.</Fonts.bodyLarge>
+      </div>
       <div className="w-2/3">
         <Accordion type="single" collapsible>
           {faqs.map((item, index) => (

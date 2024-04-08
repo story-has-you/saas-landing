@@ -2,7 +2,6 @@
 
 import { Fonts } from "@/components/fonts";
 import { Icons } from "@/components/icons";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
@@ -28,13 +27,9 @@ const item = {
 
 export function Features() {
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-16" id="features">
+    <div className="w-full flex flex-col justify-center items-center gap-16">
       <div className="flex flex-col justify-center items-center gap-8">
-        <Badge variant={"outline"}>Progress tracking</Badge>
-        <Fonts.long className="w-[750px]">
-          Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and
-          celebrate your successes, one task at a time.
-        </Fonts.long>
+        <Fonts.h2 className="w-[750px]">Features</Fonts.h2>
       </div>
       <motion.ul
         className="flex flex-wrap gap-5 w-2/3 items-center justify-center"
@@ -46,7 +41,7 @@ export function Features() {
       >
         {[1, 2, 3, 4, 5, 6].map((index) => (
           <motion.li variants={item} key={index}>
-            <Card className="w-[350px] gap-4">
+            <Card className="w-[350px] gap-4 shadow-lg">
               <CardHeader className="justify-center items-center">
                 <div className="flex w-14 h-14 bg-black justify-center items-center rounded-xl">
                   <Icons.lightning className="text-white w-7 h-7" />

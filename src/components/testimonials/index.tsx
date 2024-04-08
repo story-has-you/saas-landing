@@ -75,7 +75,13 @@ const cards = [
 export function Testimonials() {
   return (
     <div className="flex flex-col gap-16 items-center justify-center">
-      <Fonts.h2>We have worked with hundreds of amazing people</Fonts.h2>
+      <div className="flex flex-col gap-5">
+        <Fonts.h2>Wall of Love</Fonts.h2>
+        <Fonts.bodyLarge className="opacity-50">
+          If you use this landing page template and recommend it on your Twitter, please let me know. I will display
+          your tweet and recommendation here.
+        </Fonts.bodyLarge>
+      </div>
       <div className="w-full flex flex-row justify-center gap-4">
         {[0, 1, 2].map((index) => (
           <div className="flex-col items-center justify-center flex-wrap space-y-5" key={index}>
