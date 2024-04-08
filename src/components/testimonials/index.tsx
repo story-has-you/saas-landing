@@ -1,4 +1,3 @@
-"use client";
 import { Fonts } from "@/components/fonts";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -41,19 +40,12 @@ const cards = [
     avatar: "/avatars/05.png",
     avatarFallback: "TK",
   },
-  {
-    content:
-      "The ability to collaborate in real-time, combined with powerful project tracking features, has made it indispensable for our daily operations.",
-    name: "Morgan Lee",
-    account: "@morganleewhiz",
-    avatar: "/avatars/06.png",
-    avatarFallback: "ML",
-  },
+
   {
     content: "The customizability and integration capabilities of this app are top-notch.",
     name: "Riley Smith",
     account: "@rileysmith1",
-    avatar: "/avatars/07.png",
+    avatar: "/avatars/06.png",
     avatarFallback: "RS",
   },
   {
@@ -61,13 +53,20 @@ const cards = [
       "Adopting this app for our team has streamlined our project management and improved communication across the board. ",
     name: "Jordan Patels",
     account: "@jpatelsdesign",
-    avatar: "/avatars/08.png",
+    avatar: "/avatars/07.png",
     avatarFallback: "JP",
   },
   {
-    content: "With this app, we can easily assign tasks, track progress, and manage documents all in one place. ",
+    content: "With this app, we can easily assign tasks, track progress, and manage documents all in one place.",
     name: "Sam Dawson",
     account: "@dawsontechtips",
+    avatar: "/avatars/08.png",
+    avatarFallback: "SD",
+  },
+  {
+    content: " Its user-friendly interface and robust features support our diverse needs. ",
+    name: "Casey Harper",
+    account: "@casey09",
     avatar: "/avatars/09.png",
     avatarFallback: "SD",
   },
