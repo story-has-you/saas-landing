@@ -6,17 +6,15 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function Hero() {
+export default function Hero({ lang }: { lang: any }) {
   return (
     <div className="flex justify-center">
       <div className="flex flex-row justify-center items-center p-[120px_40px] space-x-60 rounded-none w-full">
         <div className="flex flex-row justify-between items-center w-[500px]">
           <div className="flex flex-col justify-center items-start gap-8">
-            <Badge variant={"outline"}>Version 2.0 is here!</Badge>
-            <Fonts.h1 className="text-start">Pathway to productivity</Fonts.h1>
-            <Fonts.bodyLarge className="opacity-80 text-start w-2/3">
-              Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and celebrate your successes.
-            </Fonts.bodyLarge>
+            <Badge variant={"outline"}>{lang.badgeText}</Badge>
+            <Fonts.h1 className="text-start">{lang.title}</Fonts.h1>
+            <Fonts.bodyLarge className="opacity-80 text-start w-2/3">{lang.description}</Fonts.bodyLarge>
             <div className="flex flex-row justify-center items-center p-0 gap-2.5 rounded-none">
               <motion.div
                 whileHover={{
@@ -24,9 +22,9 @@ export default function Hero() {
                   transition: { duration: 1 },
                 }}
               >
-                <Button className="rounded-xl">Get started</Button>
+                <Button className="rounded-xl">{lang.primaryButtonText}</Button>
               </motion.div>
-              <p>Learn more</p>
+              <p>{lang.secondaryButtonText}</p>
             </div>
           </div>
         </div>

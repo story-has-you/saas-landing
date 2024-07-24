@@ -25,11 +25,11 @@ const item = {
   },
 };
 
-export default function Features() {
+export default function Features({ lang }: { lang: any }) {
   return (
     <div className="w-full flex flex-col justify-center items-center gap-16">
       <div className="flex flex-col justify-center items-center gap-8">
-        <Fonts.h2 className="w-[750px]">Features</Fonts.h2>
+        <Fonts.h2 className="w-[750px]">{lang.title}</Fonts.h2>
       </div>
       <motion.ul
         className="flex flex-wrap gap-5 w-2/3 items-center justify-center"
@@ -39,20 +39,17 @@ export default function Features() {
         whileInView={"visible"}
         viewport={{ once: true }}
       >
-        {[1, 2, 3, 4, 5, 6].map((index) => (
+        {lang.cards.map((card: any, index: number) => (
           <motion.li variants={item} key={index}>
-            <Card className="w-[350px] gap-4 shadow-lg">
+            <Card className="w-[350px] h-[300px] gap-4 shadow-lg">
               <CardHeader className="justify-center items-center">
                 <div className="flex w-14 h-14 bg-black justify-center items-center rounded-xl">
                   <Icons.lightning className="text-white w-7 h-7" />
                 </div>
               </CardHeader>
               <CardContent className="space-y-2">
-                <Fonts.h5>Integration ecosystem</Fonts.h5>
-                <Fonts.bodyMedium className="opacity-80">
-                  Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one
-                  place.
-                </Fonts.bodyMedium>
+                <Fonts.h5>{card.title}</Fonts.h5>
+                <Fonts.bodyMedium className="opacity-80">{card.description}</Fonts.bodyMedium>
               </CardContent>
             </Card>
           </motion.li>

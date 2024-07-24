@@ -7,8 +7,19 @@ import Navigation from "@/components/navigation";
 import Pricing from "@/components/pricing";
 import Supplier from "@/components/supplier";
 import Testimonials from "@/components/testimonials";
-import { generateLanguageUrls, Locale } from "@/config/locale";
+import { dictionary, generateLanguageUrls, Locale } from "@/config/locale";
 import { siteConfig } from "@/config/site";
+
+// 提取常量
+const BACKGROUND_STYLE = {
+  background: `radial-gradient(101.4% 61.3% at 12.4% 100%, #0832bd 0%, rgb(189, 204, 255) 86.293%, rgb(235, 239, 255) 100%)`,
+};
+
+const CONTENT_STYLE = "mt-20 flex flex-col gap-32";
+
+type LanguageData = {
+  [key: string]: Record<string, any>;
+};
 
 export async function generateMetadata({ params }: { params: { slug: string; lang: Locale } }) {
   return {
@@ -24,25 +35,26 @@ export async function generateMetadata({ params }: { params: { slug: string; lan
   };
 }
 
-export default async function HomePage() {
+export default async function HomePage({ params: { lang } }: { params: { lang: Locale } }) {
+  // 优化异步数据获取
+  const components = ["banner", "navigation", "hero", "supplier", "features", "testimonials", "pricing", "faq", "footer"];
+
+  const languageData: LanguageData = Object.fromEntries(await Promise.all(components.map(async (component) => [component, await dictionary(lang, component)])));
+
   return (
     <div className="absolute w-full flex flex-col">
-      <Banner />
-      <div
-        style={{
-          background: `radial-gradient(101.4% 61.3% at 12.4% 100%, #0832bd 0%, rgb(189, 204, 255) 86.293%, rgb(235, 239, 255) 100%)`,
-        }}
-      >
-        <Navigation />
-        <Hero />
+      <Banner lang={languageData.banner} />
+      <div style={BACKGROUND_STYLE}>
+        <Navigation lang={languageData.navigation} />
+        <Hero lang={languageData.hero} />
       </div>
-      <div className="mt-20 flex flex-col gap-32">
-        <Supplier />
-        <Features />
-        <Testimonials />
-        <Pricing />
-        <FAQ />
-        <Footer />
+      <div className={CONTENT_STYLE}>
+        <Supplier lang={languageData.supplier} />
+        <Features lang={languageData.features} />
+        <Testimonials lang={languageData.testimonials} />
+        <Pricing lang={languageData.pricing} />
+        <FAQ lang={languageData.faq} />
+        <Footer lang={languageData.footer} />
       </div>
     </div>
   );

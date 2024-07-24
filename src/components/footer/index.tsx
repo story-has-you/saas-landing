@@ -7,13 +7,7 @@ const FooterLinks = () => {
   return (
     <div className="mx-auto flex flex-row items-center pb-2">
       {links.map((link) => (
-        <Link
-          key={link.name}
-          href={link.href}
-          target="_blank"
-          rel="noopener noreferrer nofollow"
-          className="mx-3 flex max-w-[24px] flex-col items-center justify-center"
-        >
+        <Link key={link.name} href={link.href} target="_blank" rel="noopener noreferrer nofollow" className="mx-3 flex max-w-[24px] flex-col items-center justify-center">
           {link.icon && React.createElement(link.icon, { className: "text-lg" })}
         </Link>
       ))}
@@ -45,7 +39,7 @@ const FooterProducts = () => {
   );
 };
 
-export default function Footer() {
+export default function Footer({ lang }: { lang: any }) {
   const d = new Date();
   const currentYear = d.getFullYear();
   const author = siteConfig.author;
@@ -59,7 +53,7 @@ export default function Footer() {
           <Link href={author.twitter || author.github} target="_blank">
             {author.name}
           </Link>{" "}
-          <div>All rights reserved.</div>
+          <div>{lang.allRightsReserved}</div>
         </div>
       </div>
     </footer>
