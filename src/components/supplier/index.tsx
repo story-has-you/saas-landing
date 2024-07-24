@@ -26,7 +26,7 @@ const suppliers = [
   },
 ];
 
-export function Supplier() {
+export default function Supplier() {
   return (
     <div className="flex flex-col gap-8 justify-center items-center w-full">
       <Fonts.bodySmall className="opacity-50">Trusted by the world’s most innovative teams</Fonts.bodySmall>

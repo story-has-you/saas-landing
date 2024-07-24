@@ -25,7 +25,7 @@ const item = {
   },
 };
 
-export function Features() {
+export default function Features() {
   return (
     <div className="w-full flex flex-col justify-center items-center gap-16">
       <div className="flex flex-col justify-center items-center gap-8">

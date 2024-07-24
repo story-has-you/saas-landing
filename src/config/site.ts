@@ -5,11 +5,9 @@ import { IoMdMail } from "react-icons/io";
 import { SiJuejin } from "react-icons/si";
 
 export const siteConfig: SiteConfig = {
-  title: "saas-landing",
+  name: "Saas Landing",
   description: "",
-  url: process.env.NEXT_PUBLIC_BASE_URL!,
-  useGoogleAnalytics: false,
-  useGoogleAdsense: false,
+  domain: "",
   links: [
     { name: "email", href: "mailto:fangxi.inori@gmail.com", icon: IoMdMail },
     { name: "twitter", href: "https://twitter.com/reavid", icon: FaTwitter },
@@ -17,6 +15,7 @@ export const siteConfig: SiteConfig = {
     { name: "juejin", href: "https://juejin.cn/user/817692381029800", icon: SiJuejin },
   ],
   keywords: ["Next.js", "Radix UI", "Tailwind CSS", "Shadcn UI"],
+  creator: "ReAvid",
   author: {
     name: "ReAvid",
     github: "https://github.com/story-has-you",
@@ -25,7 +24,7 @@ export const siteConfig: SiteConfig = {
   products: [
     {
       name: "Re NextJS Template",
-      href: "https://github.com/story-has-you/re-nextjs-template",
+      href: "https://github.com/story-has-you/reavid-nextjs-template",
     },
     {
       name: "Blog",
@@ -48,16 +47,14 @@ export const siteConfig: SiteConfig = {
 
 export const buildMetadata = (): Metadata => {
   return {
-    title: siteConfig.title,
+    title: siteConfig.name,
     description: siteConfig.description,
-    applicationName: siteConfig.title,
+    applicationName: siteConfig.name,
     alternates: {
-      canonical: siteConfig.url,
+      canonical: siteConfig.domain,
     },
     icons: {
-      icon: "/favicon.ico",
-      shortcut: "/favicon-16x16.png",
-      apple: "/apple-touch-icon.png",
+      icon: "/icon.svg",
     },
     other: {
       "google-adsense-account": process.env.NEXT_PUBLIC_PUB!,
@@ -66,6 +63,7 @@ export const buildMetadata = (): Metadata => {
     authors: [
       {
         name: siteConfig.creator,
+        url: siteConfig.author.github,
       },
     ],
     creator: siteConfig.creator,
@@ -80,3 +78,4 @@ export const buildViewport = (): Viewport => {
     ],
   };
 };
+

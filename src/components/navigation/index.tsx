@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const links = ["About", "Features", "Customers", "Updates", "Help"];
 
-export function Navigation() {
+export default function Navigation() {
   return (
     <div className="flex flex-row justify-between items-center p-5 z-0">
       <Icons.logo className="w-5 h-5" />

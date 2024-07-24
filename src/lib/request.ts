@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Makes an asynchronous HTTP request to the specified URL with the given options.
  *
@@ -38,7 +37,7 @@ export const request = async (url: string, options: RequestOptions = {}): Promis
   if (url.startsWith("http://") || url.startsWith("https://")) {
     http_url = `${url}${queryParams ? `?${queryParams}` : ""}`;
   } else {
-    http_url = `${process.env.NEXT_PUBLIC_BASE_URL}${url}${queryParams ? `?${queryParams}` : ""}`;
+    http_url = `${process.env.NEXT_PUBLIC_DOMAIN}${url}${queryParams ? `?${queryParams}` : ""}`;
   }
   try {
     const response = await fetch(http_url, requestOptions);
@@ -63,3 +62,6 @@ export const fail = (message: string | null): Response => {
     message: message ?? "FAIL",
   });
 };
+
+export const get = (url: string, { arg }: { arg?: Record<string, string> }) => request(url, { params: arg });
+export const post = async (url: string, { arg }: { arg: any }) => request(url, { method: "POST", body: arg });

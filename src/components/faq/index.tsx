@@ -60,7 +60,7 @@ const faqs = [
   },
 ];
 
-export async function FAQ() {
+export default function FAQ() {
   return (
     <div className="flex flex-col items-center justify-center w-full gap-14">
       <div className="flex flex-col gap-5">

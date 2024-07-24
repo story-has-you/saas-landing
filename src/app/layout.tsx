@@ -1,20 +1,14 @@
-import { buildMetadata, buildViewport, siteConfig } from "@/config/site";
-import { fontSans } from "@/lib/fonts";
-import { cn } from "@/lib/utils";
+import { i18n } from "@/config/locale";
+import { buildMetadata, buildViewport } from "@/config/site";
 import "@/styles/globals.css";
-import { LayoutProps } from "@/types/layout";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = buildMetadata();
 export const viewport = buildViewport();
 
-export default function RootLayout({ children }: LayoutProps) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn("min-h-screen bg-background antialiased", fontSans.className)}>
-        <main className="flex-1">{children}</main>
-      </body>
-      {siteConfig.useGoogleAnalytics && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GAID!} />}
-    </html>
-  );
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return children;
 }

@@ -33,7 +33,7 @@ const businessFeatures = [
   "Advanced security features",
 ];
 
-export function Pricing() {
+export default function Pricing() {
   return (
     <div className="flex flex-col items-center justify-center gap-10">
       <div className="flex flex-col gap-5">

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-export function Banner() {
+export default function Banner() {
   return (
     <div className="top-0 left-0 w-full h-[46px] flex flex-row justify-center items-center bg-black p-0 gap-5">
       <div className="flex flex-row justify-center items-center overflow-visible p-0 gap-5 rounded-none">
