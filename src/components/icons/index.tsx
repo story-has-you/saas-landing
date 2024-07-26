@@ -1,10 +1,11 @@
 import { SVGProps } from "react";
-import { FaGlobe } from "react-icons/fa";
+import { FaGithub, FaGlobe } from "react-icons/fa";
 import { FaBoltLightning, FaCheck } from "react-icons/fa6";
 export const Icons = {
   lightning: FaBoltLightning,
   check: FaCheck,
   globe: FaGlobe,
+  gitHub: FaGithub,
   logo: (props: SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <path

@@ -1,14 +1,49 @@
 "use client";
 
 import { Icons } from "@/components/icons";
+import Login from "@/components/login";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { i18n, Locale } from "@/config/locale";
+import { User } from "@prisma/client";
+import { signOut } from "next-auth/react";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function Navigation({ lang }: { lang: any }) {
+type NavigationProps = {
+  lang: any;
+  user: User | null;
+};
+
+const UserAvatar = ({ user, lang }: NavigationProps) => {
+  const logout = async () => {
+    await signOut();
+  };
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Avatar>
+          <AvatarImage src={user?.image!} />
+        </Avatar>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="w-56">
+        <DropdownMenuLabel>
+          {user?.name}
+          <div className="truncate text-sm text-gray-500">{user?.email}</div>
+        </DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem onClick={logout}>{lang.logout}</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+};
+
+export default function Navigation({ lang, user }: NavigationProps) {
   const pathname = usePathname();
   const params = useParams();
   const router = useRouter();
@@ -49,7 +84,16 @@ export default function Navigation({ lang }: { lang: any }) {
           </SelectContent>
         </Select>
 
-        <Button className="rounded-xl">{lang.buttonText}</Button>
+        {user ? (
+          <UserAvatar user={user} lang={lang} />
+        ) : (
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button className="rounded-xl">{lang.buttonText}</Button>
+            </DialogTrigger>
+            <Login lang={lang.login} />
+          </Dialog>
+        )}
       </div>
     </div>
   );

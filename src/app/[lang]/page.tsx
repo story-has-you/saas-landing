@@ -9,6 +9,7 @@ import Supplier from "@/components/supplier";
 import Testimonials from "@/components/testimonials";
 import { dictionary, generateLanguageUrls, Locale } from "@/config/locale";
 import { siteConfig } from "@/config/site";
+import { getServerUser } from "@/lib/user";
 
 // 提取常量
 const BACKGROUND_STYLE = {
@@ -41,11 +42,13 @@ export default async function HomePage({ params: { lang } }: { params: { lang: L
 
   const languageData: LanguageData = Object.fromEntries(await Promise.all(components.map(async (component) => [component, await dictionary(lang, component)])));
 
+  const user = await getServerUser();
+
   return (
     <div className="absolute w-full flex flex-col">
       <Banner lang={languageData.banner} />
       <div style={BACKGROUND_STYLE}>
-        <Navigation lang={languageData.navigation} />
+        <Navigation lang={languageData.navigation} user={user} />
         <Hero lang={languageData.hero} />
       </div>
       <div className={CONTENT_STYLE}>

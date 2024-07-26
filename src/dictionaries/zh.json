@@ -26,7 +26,21 @@
         "href": "/help"
       }
     ],
-    "buttonText": "免费获取"
+    "buttonText": "免费获取",
+    "logout": "退出",
+    "login": {
+      "cardTitle": "登录",
+      "cardDescription": "在下方输入您的电子邮件以登录您的账户",
+      "emailLabel": "电子邮件",
+      "emailPlaceholder": "m@example.com",
+      "passwordLabel": "密码",
+      "forgotPasswordLink": "忘记密码？",
+      "loginButton": "登录",
+      "googleLoginButton": "使用Google登录",
+      "githubLoginButton": "使用Github登录",
+      "signupPrompt": "还没有账户？",
+      "signupLink": "注册"
+    }
   },
   "hero": {
     "badgeText": "2.0 版本已发布！",
