@@ -19,7 +19,7 @@ export default function Testimonials({ lang }: { lang: any }) {
     <div className="flex flex-col gap-16 items-center justify-center">
       <div className="flex flex-col gap-5">
         <Fonts.h2>{lang.title}</Fonts.h2>
-        <Fonts.bodyLarge className="opacity-50">{lang.description}</Fonts.bodyLarge>
+        <Fonts.bodyLarge className="opacity-50 max-w-[700px]">{lang.description}</Fonts.bodyLarge>
       </div>
       <div className="w-full flex flex-row justify-center gap-4">
         {[0, 1, 2].map((columnIndex) => (

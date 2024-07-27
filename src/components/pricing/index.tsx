@@ -10,9 +10,9 @@ export default function Pricing({ lang }: { lang: any }) {
         <Fonts.h2>{lang.title}</Fonts.h2>
         <Fonts.bodyLarge className="opacity-50">{lang.subtitle}</Fonts.bodyLarge>
       </div>
-      <div className="flex flex-row items-end justify-center gap-6 w-full">
+      <div className="flex flex-row items-end justify-center gap-6 w-full max-w-[1280px]">
         {lang.plans.map((plan: any) => (
-          <div key={plan.name} className={`flex flex-col justify-end items-start p-6 border rounded-lg shadow-lg gap-8 w-1/5 ${plan.name === "Pro" ? "bg-black text-white" : ""}`}>
+          <div key={plan.name} className={`flex flex-col justify-end items-start p-6 border rounded-lg shadow-lg gap-8 ${plan.name === "Pro" ? "bg-black text-white" : ""}`}>
             <div className="flex flex-row w-full justify-between items-center">
               <h2 className="text-lg font-semibold opacity-50">{plan.name}</h2>
               {plan.badge && (

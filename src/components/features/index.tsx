@@ -32,7 +32,7 @@ export default function Features({ lang }: { lang: any }) {
         <Fonts.h2 className="w-[750px]">{lang.title}</Fonts.h2>
       </div>
       <motion.ul
-        className="flex flex-wrap gap-5 w-[1200px] items-center justify-center"
+        className="flex flex-wrap gap-5 w-full max-w-[1280px] items-center justify-center"
         variants={container}
         initial="hidden"
         animate="visible"
