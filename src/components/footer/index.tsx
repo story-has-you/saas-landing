@@ -1,60 +1,113 @@
+import { Icons } from "@/components/icons";
 import { siteConfig } from "@/config/site";
 import Link from "next/link";
-import React from "react";
-
-const FooterLinks = () => {
-  const links = siteConfig.links;
-  return (
-    <div className="mx-auto flex flex-row items-center pb-2">
-      {links.map((link) => (
-        <Link key={link.name} href={link.href} target="_blank" rel="noopener noreferrer nofollow" className="mx-3 flex max-w-[24px] flex-col items-center justify-center">
-          {link.icon && React.createElement(link.icon, { className: "text-lg" })}
-        </Link>
-      ))}
-    </div>
-  );
-};
-
-const FooterProducts = () => {
-  const products = siteConfig.products;
-  return (
-    <div className="flex space-x-2 flex-wrap justify-center">
-      {products?.map((product, index) => {
-        return (
-          <span key={product.href}>
-            <Link href={product.href} target="_blank">
-              {product.name}
-            </Link>
-            {index !== products.length - 1 ? (
-              <>
-                <span>{" • "}</span>
-              </>
-            ) : (
-              <></>
-            )}
-          </span>
-        );
-      })}
-    </div>
-  );
-};
 
 export default function Footer({ lang }: { lang: any }) {
   const d = new Date();
   const currentYear = d.getFullYear();
   const author = siteConfig.author;
   return (
-    <footer>
-      <div className="mt-16 space-y-2 pt-6 pb-4 flex flex-col items-center bg-black text-sm text-gray-400 border-t">
-        <FooterLinks />
-        <FooterProducts />
-        <div className="flex space-x-2">
-          <div>{`©${currentYear}`}</div>{" "}
-          <Link href={author.twitter || author.github} target="_blank">
-            {author.name}
-          </Link>{" "}
-          <div>{lang.allRightsReserved}</div>
+    <footer className="bg-black text-gray-400 py-12 px-4 md:px-8">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between">
+        {/* 左侧logo和描述 */}
+        <div className="mb-8 md:mb-0 md:w-1/3">
+          <div className="w-12 h-12 mb-4 bg-purple-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-white rounded transform rotate-45"></div>
+          </div>
+          <p className="text-sm max-w-xs">{lang.description}</p>
         </div>
+
+        {/* 右侧链接列表 */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:w-2/3">
+          {/* Product列 */}
+          <div>
+            <h3 className="text-white font-semibold mb-3">{lang.product.title}</h3>
+            <ul className="space-y-2">
+              {lang.product.items.map((item: any, index: number) => (
+                <li key={index}>
+                  <Link href="#" className="hover:text-white transition-colors">
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company列 */}
+          <div>
+            <h3 className="text-white font-semibold mb-3">{lang.company.title}</h3>
+            <ul className="space-y-2">
+              {lang.company.items.map((item: any, index: number) => (
+                <li key={index}>
+                  <Link href="#" className="hover:text-white transition-colors">
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources列 */}
+          <div>
+            <h3 className="text-white font-semibold mb-3">{lang.resources.title}</h3>
+            <ul className="space-y-2">
+              {lang.resources.items.map((item: any, index: number) => (
+                <li key={index}>
+                  <Link href="#" className="hover:text-white transition-colors">
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal列 */}
+          <div>
+            <h3 className="text-white font-semibold mb-3">{lang.legal.title}</h3>
+            <ul className="space-y-2">
+              {lang.legal.items.map((item: any, index: number) => (
+                <li key={index}>
+                  <Link href="#" className="hover:text-white transition-colors">
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* 社交媒体图标 */}
+      <div className="mt-12 flex justify-center space-x-6">
+        <Link href="#" className="text-gray-400 hover:text-white">
+          <span className="sr-only">{lang.socialMedia.twitter}</span>
+          <Icons.twitter className="h-6 w-6" />
+        </Link>
+
+        <Link href="#" className="text-gray-400 hover:text-white">
+          <span className="sr-only">{lang.socialMedia.instagram}</span>
+          <Icons.instagram className="h-6 w-6" />
+        </Link>
+
+        <Link href="#" className="text-gray-400 hover:text-white">
+          <span className="sr-only">{lang.socialMedia.pinterest}</span>
+          <Icons.pinterest className="h-6 w-6" />
+        </Link>
+
+        <Link href="#" className="text-gray-400 hover:text-white">
+          <span className="sr-only">{lang.socialMedia.linkedIn}</span>
+          <Icons.linkedIn className="h-6 w-6" />
+        </Link>
+
+        <Link href="#" className="text-gray-400 hover:text-white">
+          <span className="sr-only">{lang.socialMedia.tiktok}</span>
+          <Icons.tiktok className="h-6 w-6" />
+        </Link>
+
+        <Link href="#" className="text-gray-400 hover:text-white">
+          <span className="sr-only">{lang.socialMedia.youtube}</span>
+          <Icons.youtube className="h-6 w-6" />
+        </Link>
       </div>
     </footer>
   );

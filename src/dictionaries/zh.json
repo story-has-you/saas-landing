@@ -231,7 +231,58 @@
       }
     ]
   },
+  "cta": {
+    "title": "立即免费注册",
+    "description": "使用我们的应用来庆祝成就的喜悦,它专为追踪您的进度和激励您的努力而设计。",
+    "buttonText": "开始使用"
+  },
   "footer": {
-    "allRightsReserved": "保留所有权利。"
+    "description": "使用我们的应用来庆祝成就的喜悦,它专为追踪您的进度、激励您的努力和庆祝您的成功而设计。",
+    "product": {
+      "title": "产品",
+      "items": [
+        "功能",
+        "集成",
+        "更新",
+        "常见问题",
+        "定价"
+      ]
+    },
+    "company": {
+      "title": "公司",
+      "items": [
+        "关于我们",
+        "博客",
+        "招贤纳士",
+        "公司理念",
+        "新闻",
+        "联系我们"
+      ]
+    },
+    "resources": {
+      "title": "资源",
+      "items": [
+        "案例",
+        "社区",
+        "指南",
+        "文档"
+      ]
+    },
+    "legal": {
+      "title": "法律",
+      "items": [
+        "隐私政策",
+        "使用条款",
+        "安全"
+      ]
+    },
+    "socialMedia": {
+      "twitter": "推特",
+      "instagram": "Instagram",
+      "pinterest": "Pinterest",
+      "linkedin": "领英",
+      "tiktok": "抖音",
+      "youtube": "油管"
+    }
   }
 }

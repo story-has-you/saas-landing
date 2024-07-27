@@ -235,7 +235,58 @@
       }
     ]
   },
+  "cta": {
+    "title": "Sign up for free today",
+    "description": "Celebrate the joy of accomplishment with an app designed to track your progress and motivate your efforts.",
+    "buttonText": "Get Started"
+  },
   "footer": {
-    "allRightsReserved": "All rights reserved."
+    "description": "Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and celebrate your successes.",
+    "product": {
+      "title": "Product",
+      "items": [
+        "Features",
+        "Integrations",
+        "Updates",
+        "FAQ",
+        "Pricing"
+      ]
+    },
+    "company": {
+      "title": "Company",
+      "items": [
+        "About",
+        "Blog",
+        "Careers",
+        "Manifesto",
+        "Press",
+        "Contact"
+      ]
+    },
+    "resources": {
+      "title": "Resources",
+      "items": [
+        "Examples",
+        "Community",
+        "Guides",
+        "Docs"
+      ]
+    },
+    "legal": {
+      "title": "Legal",
+      "items": [
+        "Privacy",
+        "Terms",
+        "Security"
+      ]
+    },
+    "socialMedia": {
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "pinterest": "Pinterest",
+      "linkedin": "LinkedIn",
+      "tiktok": "TikTok",
+      "youtube": "YouTube"
+    }
   }
 }

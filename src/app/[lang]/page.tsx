@@ -1,4 +1,5 @@
 import Banner from "@/components/banner";
+import CTA from "@/components/cta";
 import FAQ from "@/components/faq";
 import Features from "@/components/features";
 import Footer from "@/components/footer";
@@ -16,7 +17,7 @@ const BACKGROUND_STYLE = {
   background: `radial-gradient(101.4% 61.3% at 12.4% 100%, #0832bd 0%, rgb(189, 204, 255) 86.293%, rgb(235, 239, 255) 100%)`,
 };
 
-const CONTENT_STYLE = "mt-20 flex flex-col gap-32";
+const CONTENT_STYLE = "mt-20 flex flex-col space-y-32";
 
 type LanguageData = {
   [key: string]: Record<string, any>;
@@ -38,7 +39,7 @@ export async function generateMetadata({ params }: { params: { slug: string; lan
 
 export default async function HomePage({ params: { lang } }: { params: { lang: Locale } }) {
   // 优化异步数据获取
-  const components = ["banner", "navigation", "hero", "supplier", "features", "testimonials", "pricing", "faq", "footer"];
+  const components = ["banner", "navigation", "hero", "supplier", "features", "testimonials", "pricing", "faq", "cta","footer"];
 
   const languageData: LanguageData = Object.fromEntries(await Promise.all(components.map(async (component) => [component, await dictionary(lang, component)])));
 
@@ -57,7 +58,10 @@ export default async function HomePage({ params: { lang } }: { params: { lang: L
         <Testimonials lang={languageData.testimonials} />
         <Pricing lang={languageData.pricing} />
         <FAQ lang={languageData.faq} />
-        <Footer lang={languageData.footer} />
+        <div>
+          <CTA lang={languageData.cta} />
+          <Footer lang={languageData.footer} />
+        </div>
       </div>
     </div>
   );

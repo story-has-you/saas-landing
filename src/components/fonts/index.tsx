@@ -8,35 +8,35 @@ interface FontsProps {
 export const Fonts = {
   h1: (props: FontsProps) => (
     <h1
-      className={`font-semibold text-black max-w-[1200px] text-8xl tracking-tighter text-center ${props.className} ${fontSans.className}`}
+      className={`font-semibold text-foreground max-w-[1200px] text-8xl tracking-tighter text-center ${props.className} ${fontSans.className}`}
     >
       {props.children}
     </h1>
   ),
   h2: (props: FontsProps) => (
     <h2
-      className={`font-semibold text-black max-w-[1200px] text-6xl tracking-tight text-center ${props.className} ${fontSans.className}`}
+      className={`font-semibold text-foreground max-w-[1200px] text-6xl tracking-tight text-center ${props.className} ${fontSans.className}`}
     >
       {props.children}
     </h2>
   ),
   h3: (props: FontsProps) => (
     <h3
-      className={`font-semibold text-black max-w-[1200px] text-4xl tracking-tight text-center ${props.className} ${fontSans.className}`}
+      className={`font-semibold text-foreground max-w-[1200px] text-4xl tracking-tight text-center ${props.className} ${fontSans.className}`}
     >
       {props.children}
     </h3>
   ),
   h4: (props: FontsProps) => (
     <h4
-      className={`font-semibold text-black max-w-[1200px] text-2xl tracking-tight text-center ${props.className} ${fontSans.className}`}
+      className={`font-semibold text-foreground max-w-[1200px] text-2xl tracking-tight text-center ${props.className} ${fontSans.className}`}
     >
       {props.children}
     </h4>
   ),
   h5: (props: FontsProps) => (
     <h5
-      className={`font-semibold text-black max-w-[1200px] text-lg tracking-tight text-center ${props.className} ${fontSans.className}`}
+      className={`font-semibold text-foreground max-w-[1200px] text-lg tracking-tight text-center ${props.className} ${fontSans.className}`}
     >
       {props.children}
     </h5>
@@ -44,28 +44,28 @@ export const Fonts = {
 
   bodySmall: (props: FontsProps) => (
     <p
-      className={`font-medium text-black max-w-[1200px] text-sm tracking-tight text-center ${props.className} ${fontSans.className}`}
+      className={`font-medium text-foreground max-w-[1200px] text-sm tracking-tight text-center ${props.className} ${fontSans.className}`}
     >
       {props.children}
     </p>
   ),
   bodyMedium: (props: FontsProps) => (
     <p
-      className={`font-medium text-black max-w-[1200px] text-base text-center ${props.className} ${fontSans.className}`}
+      className={`font-medium text-foreground max-w-[1200px] text-base text-center ${props.className} ${fontSans.className}`}
     >
       {props.children}
     </p>
   ),
   bodyLarge: (props: FontsProps) => (
     <p
-      className={`font-medium text-black max-w-[1200px] text-xl tracking-tight text-center ${props.className} ${fontSans.className}`}
+      className={`font-medium text-foreground max-w-[1200px] text-xl tracking-tight text-center ${props.className} ${fontSans.className}`}
     >
       {props.children}
     </p>
   ),
   long: (props: FontsProps) => (
     <p
-      className={`font-bold text-black max-w-[1200px] text-3xl tracking-tight text-center ${props.className} ${fontSans.className}`}
+      className={`font-bold text-foreground max-w-[1200px] text-3xl tracking-tight text-center ${props.className} ${fontSans.className}`}
     >
       {props.children}
     </p>
