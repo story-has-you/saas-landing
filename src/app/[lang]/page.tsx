@@ -59,7 +59,7 @@ export default async function HomePage({ params: { lang } }: { params: { lang: L
         <Pricing lang={languageData.pricing} />
         <FAQ lang={languageData.faq} />
         <div>
-          <CTA lang={languageData.cta} />
+          <CTA lang={languageData.cta} user={user} />
           <Footer lang={languageData.footer} />
         </div>
       </div>
