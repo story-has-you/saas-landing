@@ -12,7 +12,13 @@ type CTAProps = {
 };
 
 const BACKGROUND_STYLE = {
-  background: `radial-gradient(101.4% 61.3% at 12.4% 100%, #0832bd 0%, rgb(189, 204, 255) 86.293%, rgb(235, 239, 255) 100%)`,
+  backgroundColor: "hsla(132, 0%, 100%, 1)",
+  backgroundImage: `
+    radial-gradient(circle at 91% 11%, hsla(13, 100%, 88%, 0.66) 4.038772213247173%, transparent 37.2265767974114%),
+    radial-gradient(circle at 66% 37%, hsla(323, 100%, 88%, 1) 0%, transparent 63.33640956108327%),
+    radial-gradient(circle at 36% 87%, hsla(268, 100%, 88%, 1) 12.107536057085522%, transparent 63.33640956108327%)
+  `,
+  backgroundBlendMode: "normal, normal, normal",
 };
 
 export default function CTA({ lang, user }: CTAProps) {

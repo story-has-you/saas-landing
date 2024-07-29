@@ -284,5 +284,15 @@
     "githubLoginButton": "使用Github登录",
     "signupPrompt": "还没有账户？",
     "signupLink": "注册"
+  },
+  "playground": {
+    "title": "AI 图像生成工具",
+    "inputPlaceholder": "在此输入您的提示...",
+    "generateButton": {
+      "idle": "生成",
+      "loading": "正在生成"
+    },
+    "imagePlaceholder": "生成的图像将显示在这里",
+    "logout": "退出登录"
   }
 }

@@ -14,7 +14,16 @@ import { getServerUser } from "@/lib/user";
 
 // 提取常量
 const BACKGROUND_STYLE = {
-  background: `radial-gradient(101.4% 61.3% at 12.4% 100%, #0832bd 0%, rgb(189, 204, 255) 86.293%, rgb(235, 239, 255) 100%)`,
+  backgroundColor: "hsla(204, 0%, 100%, 1)",
+  backgroundImage: `
+    radial-gradient(circle at 0% 0%, hsla(295.99999999999994, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%),
+    radial-gradient(circle at 20% 0%, hsla(236.91176470588243, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%),
+    radial-gradient(circle at 40% 0%, hsla(186.61764705882354, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%),
+    radial-gradient(circle at 60% 0%, hsla(127.0588235294118, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%),
+    radial-gradient(circle at 80% 0%, hsla(62.20588235294117, 77%, 74%, 0.35) 3.1210986267166043%, transparent 40%),
+    radial-gradient(circle at 100% 0%, hsla(23.823529411764703, 77%, 74%, 0.35) 3%, transparent 40%)
+  `,
+  backgroundBlendMode: "normal, normal, normal, normal, normal, normal",
 };
 
 const CONTENT_STYLE = "mt-20 flex flex-col space-y-32";

@@ -33,12 +33,8 @@ export const request = async (url: string, options: RequestOptions = {}): Promis
     };
   }
 
-  let http_url;
-  if (url.startsWith("http://") || url.startsWith("https://")) {
-    http_url = `${url}${queryParams ? `?${queryParams}` : ""}`;
-  } else {
-    http_url = `${process.env.NEXT_PUBLIC_DOMAIN}${url}${queryParams ? `?${queryParams}` : ""}`;
-  }
+  const http_url = `${url}${queryParams ? `?${queryParams}` : ""}`;
+
   try {
     const response = await fetch(http_url, requestOptions);
     if (!response.ok) {

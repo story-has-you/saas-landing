@@ -288,5 +288,15 @@
     "githubLoginButton": "Login with Github",
     "signupPrompt": "Don't have an account?",
     "signupLink": "Sign up"
+  },
+  "playground": {
+    "title": "AI Image Playground",
+    "inputPlaceholder": "Enter your prompt here...",
+    "generateButton": {
+      "idle": "Generate",
+      "loading": "Generating"
+    },
+    "imagePlaceholder": "Your generated image will appear here",
+    "logout": "Logout"
   }
 }
