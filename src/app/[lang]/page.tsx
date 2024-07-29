@@ -39,11 +39,15 @@ export async function generateMetadata({ params }: { params: { slug: string; lan
 
 export default async function HomePage({ params: { lang } }: { params: { lang: Locale } }) {
   // 优化异步数据获取
-  const components = ["banner", "navigation", "hero", "supplier", "features", "testimonials", "pricing", "faq", "cta","footer"];
+  const components = ["banner", "navigation", "hero", "supplier", "features", "testimonials", "pricing", "faq", "cta", "footer", "login"];
 
   const languageData: LanguageData = Object.fromEntries(await Promise.all(components.map(async (component) => [component, await dictionary(lang, component)])));
 
   const user = await getServerUser();
+
+  languageData.banner!.login = languageData.login;
+  languageData.navigation!.login = languageData.login;
+  languageData.cta!.login = languageData.login;
 
   return (
     <div className="absolute w-full flex flex-col">

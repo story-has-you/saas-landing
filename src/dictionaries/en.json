@@ -27,20 +27,7 @@
       }
     ],
     "buttonText": "Get for free",
-    "logout": "Logout",
-    "login": {
-      "cardTitle": "Login",
-      "cardDescription": "Enter your email below to login to your account",
-      "emailLabel": "Email",
-      "emailPlaceholder": "m@example.com",
-      "passwordLabel": "Password",
-      "forgotPasswordLink": "Forgot your password?",
-      "loginButton": "Login",
-      "googleLoginButton": "Login with Google",
-      "githubLoginButton": "Login with Github",
-      "signupPrompt": "Don't have an account?",
-      "signupLink": "Sign up"
-    }
+    "logout": "Logout"
   },
   "hero": {
     "badgeText": "Version 2.0 is here!",
@@ -288,5 +275,18 @@
       "tiktok": "TikTok",
       "youtube": "YouTube"
     }
+  },
+  "login": {
+    "cardTitle": "Login",
+    "cardDescription": "Enter your email below to login to your account",
+    "emailLabel": "Email",
+    "emailPlaceholder": "m@example.com",
+    "passwordLabel": "Password",
+    "forgotPasswordLink": "Forgot your password?",
+    "loginButton": "Login",
+    "googleLoginButton": "Login with Google",
+    "githubLoginButton": "Login with Github",
+    "signupPrompt": "Don't have an account?",
+    "signupLink": "Sign up"
   }
 }
