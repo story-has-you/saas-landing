@@ -1,12 +1,14 @@
 "use client";
-import { Button } from "@/components/ui/button";
+
+import SubmitButton from "@/components/playground/submit-button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import UserAvatar from "@/components/user-avatar";
+import { action } from "@/lib/action";
 import { User } from "@prisma/client";
-import { Loader2 } from "lucide-react";
+import Image from "next/image";
 import { redirect, useParams } from "next/navigation";
-import { useState } from "react";
+import { useFormState } from "react-dom";
 
 type PlaygroundProps = {
   lang: any;
@@ -18,20 +20,7 @@ export default function Playground({ lang, user }: PlaygroundProps) {
   if (!user) {
     redirect("/");
   }
-
-  const [prompt, setPrompt] = useState("");
-  const [generatedImage, setGeneratedImage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleGenerate = async () => {
-    setIsLoading(true);
-    // 这里应该是调用AI图像生成API的逻辑
-    // 为了演示,我们使用一个占位图像
-    setTimeout(() => {
-      setGeneratedImage("https://via.placeholder.com/512x512.png?text=AI+Generated+Image");
-      setIsLoading(false);
-    }, 2000);
-  };
+  const [state, formAction] = useFormState(action, { output: "", type: "image" });
 
   return (
     <div>
@@ -55,26 +44,22 @@ export default function Playground({ lang, user }: PlaygroundProps) {
       <main className="max-w-4xl mx-auto p-8">
         <Card className="mb-8 shadow-lg">
           <CardContent className="p-6">
-            <div className="flex space-x-4">
-              <Input placeholder={`${lang.inputPlaceholder}`} value={prompt} onChange={(e) => setPrompt(e.target.value)} className="flex-grow" />
-              <Button onClick={handleGenerate} disabled={isLoading}>
-                {isLoading ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    {lang.generateButton.loading}
-                  </>
-                ) : (
-                  lang.generateButton.idle
-                )}
-              </Button>
-            </div>
+            <form action={formAction}>
+              <div className="flex space-x-4">
+                <Input name="prompt" placeholder={lang.inputPlaceholder} className="flex-grow" />
+                <SubmitButton lang={lang} />
+              </div>
+            </form>
           </CardContent>
         </Card>
 
         <Card className="shadow-lg">
           <CardContent className="p-6">
-            {generatedImage ? (
-              <img src={generatedImage} alt="AI Generated" className="w-full h-auto rounded-lg shadow-md" />
+            {state.output ? (
+              <div>
+                {state.type === "image" && <Image src={state.output} alt="AI Generated" className="w-full h-auto rounded-lg shadow-md" />}
+                {state.type === "video" && <video src={state.output} preload="auto" autoPlay controls loop className="w-full h-auto rounded-lg shadow-md" />}
+              </div>
             ) : (
               <div className="h-64 flex items-center justify-center bg-gray-100 rounded-lg">
                 <p className="text-gray-500">{lang.imagePlaceholder}</p>
