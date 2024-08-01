@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import UserAvatar from "@/components/user-avatar";
 import { action } from "@/lib/action";
 import { User } from "@prisma/client";
-import Image from "next/image";
 import { redirect, useParams } from "next/navigation";
 import { useFormState } from "react-dom";
 
@@ -20,7 +19,7 @@ export default function Playground({ lang, user }: PlaygroundProps) {
   if (!user) {
     redirect("/");
   }
-  const [state, formAction] = useFormState(action, { output: "", type: "image" });
+  const [state, formAction] = useFormState(action, { success: false, type: "" });
 
   return (
     <div>
@@ -55,16 +54,9 @@ export default function Playground({ lang, user }: PlaygroundProps) {
 
         <Card className="shadow-lg">
           <CardContent className="p-6">
-            {state.output ? (
-              <div>
-                {state.type === "image" && <Image src={state.output} alt="AI Generated" className="w-full h-auto rounded-lg shadow-md" />}
-                {state.type === "video" && <video src={state.output} preload="auto" autoPlay controls loop className="w-full h-auto rounded-lg shadow-md" />}
-              </div>
-            ) : (
-              <div className="h-64 flex items-center justify-center bg-gray-100 rounded-lg">
-                <p className="text-gray-500">{lang.imagePlaceholder}</p>
-              </div>
-            )}
+            <div className="h-64 flex items-center justify-center bg-gray-100 rounded-lg">
+              <p className="text-gray-500">{lang.imagePlaceholder}</p>
+            </div>
           </CardContent>
         </Card>
       </main>
