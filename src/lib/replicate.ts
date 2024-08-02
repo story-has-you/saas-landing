@@ -14,7 +14,14 @@ class ReplicateModel {
   }
 
   public create = async () => {
-    await this.replicate.predictions.create({ ...this.replicateConfig });
+    await this.replicate.predictions.create({
+      model: this.replicateConfig.model,
+      version: this.replicateConfig.version,
+      input: this.replicateConfig.input,
+      stream: this.replicateConfig.stream,
+      webhook: this.replicateConfig.webhook,
+      webhook_events_filter: this.replicateConfig.webhook_events_filter,
+    });
   };
 }
 

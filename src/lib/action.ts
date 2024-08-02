@@ -16,6 +16,7 @@ const replicateConfig: ReplicateConfig = {
     motion_module: "mm_sd_v14",
     guidance_scale: 7.5,
   },
+  stream: true,
   webhook: `https://${siteConfig.domain}/api/replicate-webhook`,
   webhook_events_filter: ["completed"],
 };
