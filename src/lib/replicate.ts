@@ -23,6 +23,11 @@ class ReplicateModel {
       webhook_events_filter: this.replicateConfig.webhook_events_filter,
     });
   };
+
+  public run = async () => {
+    const url = `${this.replicateConfig.model}:${this.replicateConfig.version}` as `${string}/${string}:${string}`;
+    await this.replicate.run(url, this.replicateConfig);
+  };
 }
 
 export const replicate = (replicateConfig: ReplicateConfig) => new ReplicateModel(replicateConfig);
