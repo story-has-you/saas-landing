@@ -4,7 +4,6 @@ import { Fonts } from "@/components/fonts";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function Hero({ lang }: { lang: any }) {
   return (
@@ -30,15 +29,15 @@ export default function Hero({ lang }: { lang: any }) {
         </div>
 
         <motion.div className="w-full h-[598px] max-w-[600px]" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
-          <Image src="https://framerusercontent.com/images/CoAe1eW9S1x6kWgYfFZw038Bw.png?scale-down-to=512" height={697} width={697} alt="shape-holo-1" />
+          <img src="https://framerusercontent.com/images/CoAe1eW9S1x6kWgYfFZw038Bw.png?scale-down-to=512" height={697} width={697} alt="shape-holo-1" />
         </motion.div>
 
         <motion.div className="absolute top-32 left-96 z-10" animate={{ x: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
-          <Image src="https://framerusercontent.com/images/mS28QhWcSped7JSQ7vltnisa5c8.png?scale-down-to=1024" height={236} width={236} alt="shape-holo-2" />
+          <img src="https://framerusercontent.com/images/mS28QhWcSped7JSQ7vltnisa5c8.png?scale-down-to=1024" height={236} width={236} alt="shape-holo-2" />
         </motion.div>
 
         <motion.div className="absolute top-[800px] right-16 rotate-45 z-10" animate={{ x: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
-          <Image src="https://framerusercontent.com/images/MJeIlKDeZABMXLwJpB6Bztr0ofE.png?scale-down-to=512" height={243} width={243} alt="shape-holo-2" />
+          <img src="https://framerusercontent.com/images/MJeIlKDeZABMXLwJpB6Bztr0ofE.png?scale-down-to=512" height={243} width={243} alt="shape-holo-2" />
         </motion.div>
       </div>
     </div>
