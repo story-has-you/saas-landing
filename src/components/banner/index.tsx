@@ -1,6 +1,5 @@
 "use client";
 
-import Login from "@/components/login";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 
@@ -16,7 +15,6 @@ export default function Banner({ lang }: { lang: any }) {
                 {lang.buttonText}
               </Button>
             </DialogTrigger>
-            <Login lang={lang.login} />
           </Dialog>
         </div>
       </div>

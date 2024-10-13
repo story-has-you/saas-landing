@@ -10,8 +10,6 @@ import Supplier from "@/components/supplier";
 import Testimonials from "@/components/testimonials";
 import { dictionary, generateLanguageUrls, Locale } from "@/config/locale";
 import { siteConfig } from "@/config/site";
-import { getServerUser } from "@/lib/user";
-import { redirect } from "next/navigation";
 
 // 提取常量
 const BACKGROUND_STYLE = {
@@ -48,25 +46,16 @@ export async function generateMetadata({ params }: { params: { slug: string; lan
 }
 
 export default async function HomePage({ params: { lang } }: { params: { lang: Locale } }) {
-  const user = await getServerUser();
-  if (user) {
-    redirect(`/playground`);
-  }
   // 优化异步数据获取
   const components = ["banner", "navigation", "hero", "supplier", "features", "testimonials", "pricing", "faq", "cta", "footer", "login"];
 
   const languageData: LanguageData = Object.fromEntries(await Promise.all(components.map(async (component) => [component, await dictionary(lang, component)])));
 
-
-  languageData.banner!.login = languageData.login;
-  languageData.navigation!.login = languageData.login;
-  languageData.cta!.login = languageData.login;
-
   return (
     <div className="absolute w-full flex flex-col">
       <Banner lang={languageData.banner} />
       <div style={BACKGROUND_STYLE}>
-        <Navigation lang={languageData.navigation} user={user} />
+        <Navigation lang={languageData.navigation} />
         <Hero lang={languageData.hero} />
       </div>
       <div className={CONTENT_STYLE}>
@@ -76,7 +65,7 @@ export default async function HomePage({ params: { lang } }: { params: { lang: L
         <Pricing lang={languageData.pricing} />
         <FAQ lang={languageData.faq} />
         <div>
-          <CTA lang={languageData.cta} user={user} />
+          <CTA lang={languageData.cta} />
           <Footer lang={languageData.footer} />
         </div>
       </div>

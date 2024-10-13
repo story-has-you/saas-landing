@@ -5,9 +5,9 @@ import GoogleAdSense from "@/components/google-adsense";
  */
 export default function Template({ children }: { children: React.ReactNode }) {
   return (
-    <div>
+    <>
       <div>{children}</div>
       {process.env.NEXT_PUBLIC_PUB && <GoogleAdSense pubId={process.env.NEXT_PUBLIC_PUB} />}
-    </div>
+    </>
   );
 }

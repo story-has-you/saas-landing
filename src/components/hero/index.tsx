@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function Hero({ lang }: { lang: any }) {
   return (
     <div className="flex justify-center">
-      <div className="flex flex-row justify-center items-center p-[120px_40px] space-x-60 rounded-none w-full">
+      <div className="flex flex-row justify-start p-32 items-center space-x-60 rounded-none w-full">
         <div className="flex flex-row justify-between items-center w-[500px]">
           <div className="flex flex-col justify-center items-start gap-8">
             <Badge variant={"outline"}>{lang.badgeText}</Badge>
@@ -28,11 +28,11 @@ export default function Hero({ lang }: { lang: any }) {
           </div>
         </div>
 
-        <motion.div className="w-full h-[598px] max-w-[600px]" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+        <motion.div className="absolute left-1/3 max-w-[600px]" animate={{ y: [0, -10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
           <img src="https://framerusercontent.com/images/mS28QhWcSped7JSQ7vltnisa5c8.png?scale-down-to=1024" height={697} width={697} alt="shape-holo-1" />
         </motion.div>
 
-        <motion.div className="absolute top-32 left-96 z-10" animate={{ x: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+        <motion.div className="absolute top-32 left-64 z-10" animate={{ x: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }}>
           <img src="https://framerusercontent.com/images/CoAe1eW9S1x6kWgYfFZw038Bw.png?scale-down-to=512" height={236} width={236} alt="shape-holo-2" />
         </motion.div>
 

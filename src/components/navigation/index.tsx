@@ -1,24 +1,17 @@
 "use client";
 
 import { Icons } from "@/components/icons";
-import Login from "@/components/login";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import UserAvatar from "@/components/user-avatar";
 import { i18n, Locale } from "@/config/locale";
-import { User } from "@prisma/client";
 import Link from "next/link";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
 type NavigationProps = {
   lang: any;
-  user: User | null;
 };
 
-
-export default function Navigation({ lang, user }: NavigationProps) {
+export default function Navigation({ lang }: NavigationProps) {
   const pathname = usePathname();
   const params = useParams();
   const router = useRouter();
@@ -54,17 +47,6 @@ export default function Navigation({ lang, user }: NavigationProps) {
             ))}
           </SelectContent>
         </Select>
-
-        {user ? (
-          <UserAvatar user={user} lang={lang} locale={params.lang} />
-        ) : (
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button className="rounded-xl">{lang.buttonText}</Button>
-            </DialogTrigger>
-            <Login lang={lang.login} />
-          </Dialog>
-        )}
       </div>
     </div>
   );
