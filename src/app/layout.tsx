@@ -1,9 +1,5 @@
-import { buildMetadata, buildViewport } from "@/config/site";
-import "@/styles/globals.css";
+import "./globals.css";
 
-export const metadata = buildMetadata();
-export const viewport = buildViewport();
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return children;
 }

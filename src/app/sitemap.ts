@@ -1,10 +1,8 @@
-import { siteConfig } from "@/config/site";
-import { MetadataRoute } from "next";
-
-export default function sitemap(): MetadataRoute.Sitemap {
+import config from "@/lib/config";
+export default function sitemap() {
   return [
     {
-      url: `${siteConfig.domain}/`,
+      url: config.url,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 1,

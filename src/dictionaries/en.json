@@ -120,13 +120,7 @@
         "price": "0",
         "period": "/month",
         "buttonText": "Get started for free",
-        "features": [
-          "Up to 5 project members",
-          "Unlimited tasks and projects",
-          "2 GB storage",
-          "Integrations",
-          "Basic support"
-        ]
+        "features": ["Up to 5 project members", "Unlimited tasks and projects", "2 GB storage", "Integrations", "Basic support"]
       },
       {
         "name": "Pro",
@@ -134,15 +128,7 @@
         "period": "/month",
         "buttonText": "Sign up now",
         "badge": "Most popular",
-        "features": [
-          "Up to 50 project members",
-          "Unlimited tasks and projects",
-          "50 GB storage",
-          "Integrations",
-          "Priority support",
-          "Advanced analytics",
-          "Export capabilities"
-        ]
+        "features": ["Up to 50 project members", "Unlimited tasks and projects", "50 GB storage", "Integrations", "Priority support", "Advanced analytics", "Export capabilities"]
       },
       {
         "name": "Business",
@@ -231,49 +217,23 @@
     "description": "Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and celebrate your successes.",
     "product": {
       "title": "Product",
-      "items": [
-        "Features",
-        "Integrations",
-        "Updates",
-        "FAQ",
-        "Pricing"
-      ]
+      "items": ["Features", "Integrations", "Updates", "FAQ", "Pricing"]
     },
     "company": {
       "title": "Company",
-      "items": [
-        "About",
-        "Blog",
-        "Careers",
-        "Manifesto",
-        "Press",
-        "Contact"
-      ]
+      "items": ["About", "Blog", "Careers", "Manifesto", "Press", "Contact"]
     },
     "resources": {
       "title": "Resources",
-      "items": [
-        "Examples",
-        "Community",
-        "Guides",
-        "Docs"
-      ]
+      "items": ["Examples", "Community", "Guides", "Docs"]
     },
     "legal": {
       "title": "Legal",
-      "items": [
-        "Privacy",
-        "Terms",
-        "Security"
-      ]
+      "items": ["Privacy", "Terms", "Security"]
     },
     "socialMedia": {
-      "twitter": "Twitter",
-      "instagram": "Instagram",
-      "pinterest": "Pinterest",
-      "linkedin": "LinkedIn",
-      "tiktok": "TikTok",
-      "youtube": "YouTube"
+      "x": "X",
+      "gitHub": "GitHub"
     }
   },
   "login": {

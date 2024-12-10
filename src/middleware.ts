@@ -1,30 +1,14 @@
-import { getLocale, locales, pathnames } from "@/config/locale";
+import { routing } from "@/i18n/routing";
 import createMiddleware from "next-intl/middleware";
-import { NextRequest } from "next/server";
 
-const intlMiddleware = createMiddleware({
-  defaultLocale: "en",
-  locales,
-  pathnames,
-  localePrefix: "as-needed",
-  localeDetection: false,
-});
+export default createMiddleware(routing);
 
-export function middleware(req: NextRequest) {
-  // Call the existing middleware from next-intl
-  const response = intlMiddleware(req);
-
-  // Get the locale from the request
-  const locale = getLocale(req);
-
-  if (locale) {
-    response.cookies.set("x-locale", locale);
-  }
-
-  return response;
-}
-
+// 更新 matcher 配置以支持语言切换
 export const config = {
-  // Matcher ignoring `/_next/` and `/api/`
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|robots|sitemap|ads).*)"],
+  matcher: [
+    // Match all pathnames except for
+    // - … files in the public folder
+    // - … while maintaining all locale prefixes
+    "/((?!api|_next|.*\\..*).*)",
+  ],
 };
