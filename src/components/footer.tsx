@@ -1,6 +1,5 @@
 "use client";
 
-import { GitHub } from "@/components/icon";
 import { X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -49,11 +48,6 @@ const Footer: React.FC = () => {
         <Link href="#" className="text-gray-400 hover:text-white">
           <span className="sr-only">{t("socialMedia.x")}</span>
           <X className="h-6 w-6" />
-        </Link>
-
-        <Link href="#" className="text-gray-400 hover:text-white">
-          <span className="sr-only">{t("socialMedia.gitHub")}</span>
-          <GitHub className="h-6 w-6" />
         </Link>
       </div>
     </footer>
