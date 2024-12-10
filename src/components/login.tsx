@@ -4,7 +4,6 @@ import { GitHub, Google } from "@/components/icon";
 import { Button } from "@/components/ui/button";
 import { CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { DialogContent } from "@/components/ui/dialog";
-import { signIn } from "next-auth/react";
 import { useTranslations } from "next-intl";
 
 const CALLBACK_URL = "/playground";
@@ -24,7 +23,7 @@ const Login: React.FC = () => {
 
   const handleSignIn = async (providerId: AuthProvider["id"]) => {
     try {
-      await signIn(providerId, { callbackUrl: CALLBACK_URL });
+      // await signIn(providerId, { callbackUrl: CALLBACK_URL });
     } catch (error) {
       console.error(`Failed to sign in with ${providerId}:`, error);
       // 这里可以添加错误处理，比如显示错误提示

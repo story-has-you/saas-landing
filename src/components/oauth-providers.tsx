@@ -4,7 +4,6 @@ import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { signIn } from "next-auth/react";
 import { useTranslations } from "next-intl";
 
 interface Provider {
@@ -42,9 +41,9 @@ const OAuthProviders = ({ callbackUrl = "/" }: OAuthProvidersProps) => {
 
   const handleOAuthSignIn = async (provider: Provider) => {
     try {
-      await signIn(provider.id, {
-        callbackUrl,
-      });
+      // await signIn(provider.id, {
+      //   callbackUrl,
+      // });
     } catch (error) {
       console.error(`${provider.id} sign in error:`, error);
       toast({
