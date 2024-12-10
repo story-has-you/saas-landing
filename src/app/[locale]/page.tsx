@@ -6,7 +6,6 @@ import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import Navigation from "@/components/navigation";
 import Pricing from "@/components/pricing";
-import Supplier from "@/components/supplier";
 import Testimonials from "@/components/testimonials";
 import config from "@/lib/config";
 import { generateLanguageUrls } from "@/lib/locale";
@@ -50,7 +49,6 @@ export default async function HomePage() {
         <Hero />
       </div>
       <div className="w-full mt-20 flex flex-col space-y-32">
-        <Supplier />
         <Features />
         <Testimonials />
         <Pricing />
