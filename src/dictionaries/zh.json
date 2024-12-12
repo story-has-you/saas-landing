@@ -243,5 +243,111 @@
     },
     "imagePlaceholder": "生成的图像将显示在这里",
     "logout": "退出登录"
+  },
+  "auth": {
+    "oauth": {
+      "continue": "使用 {provider} 继续",
+      "error": {
+        "title": "错误",
+        "description": "连接 {provider} 失败。请重试"
+      },
+      "providers": {
+        "google": "谷歌",
+        "github": "GitHub"
+      }
+    },
+    "signin": {
+      "title": "欢迎回来",
+      "description": "输入您的凭证以继续",
+      "logo": {
+        "alt": "Gumroad Data 标志"
+      },
+      "form": {
+        "email": {
+          "label": "邮箱",
+          "placeholder": "输入您的邮箱"
+        },
+        "password": {
+          "label": "密码",
+          "placeholder": "输入您的密码"
+        },
+        "errors": {
+          "email": {
+            "required": "邮箱为必填",
+            "invalid": "请输入有效的邮箱地址"
+          },
+          "password": {
+            "required": "密码为必填",
+            "minLength": "密码必须至少 6 个字符"
+          }
+        }
+      },
+      "buttons": {
+        "submit": {
+          "default": "登录",
+          "loading": "登录中..."
+        },
+        "createAccount": "创建账户",
+        "forgotPassword": "忘记密码？"
+      },
+      "divider": "或继续使用",
+      "toast": {
+        "success": {
+          "title": "成功",
+          "description": "登录成功"
+        },
+        "error": {
+          "title": "认证错误",
+          "default": "发生意外错误"
+        }
+      }
+    },
+    "signup": {
+      "title": "创建账户",
+      "description": "输入您的信息以开始",
+      "logo": {
+        "alt": "Gumroad Data 标志"
+      },
+      "form": {
+        "email": {
+          "label": "邮箱",
+          "placeholder": "输入您的邮箱",
+          "errors": {
+            "required": "邮箱为必填",
+            "invalid": "请输入有效的邮箱地址"
+          }
+        },
+        "password": {
+          "label": "密码",
+          "placeholder": "创建密码",
+          "confirmLabel": "确认密码",
+          "confirmPlaceholder": "确认您的密码",
+          "errors": {
+            "required": "密码为必填",
+            "minLength": "密码必须至少 8 个字符",
+            "mismatch": "密码不匹配"
+          }
+        }
+      },
+      "buttons": {
+        "submit": {
+          "default": "创建账户",
+          "loading": "创建中..."
+        },
+        "signIn": "登录"
+      },
+      "divider": "或继续使用",
+      "toast": {
+        "success": {
+          "title": "成功",
+          "description": "您的账户已成功创建"
+        },
+        "error": {
+          "title": "错误",
+          "description": "创建账户失败",
+          "autoSignIn": "自动登录失败"
+        }
+      }
+    }
   }
 }

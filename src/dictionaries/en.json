@@ -258,5 +258,111 @@
     },
     "imagePlaceholder": "Your generated image will appear here",
     "logout": "Logout"
+  },
+  "auth": {
+    "oauth": {
+      "continue": "Continue with {provider}",
+      "error": {
+        "title": "Error",
+        "description": "Failed to connect with {provider}. Please try again"
+      },
+      "providers": {
+        "google": "Google",
+        "github": "GitHub"
+      }
+    },
+    "signin": {
+      "title": "Welcome back",
+      "description": "Enter your credentials to continue",
+      "logo": {
+        "alt": "Gumroad Data Logo"
+      },
+      "form": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter your email"
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Enter your password"
+        },
+        "errors": {
+          "email": {
+            "required": "Email is required",
+            "invalid": "Please enter a valid email address"
+          },
+          "password": {
+            "required": "Password is required",
+            "minLength": "Password must be at least 6 characters"
+          }
+        }
+      },
+      "buttons": {
+        "submit": {
+          "default": "Sign in",
+          "loading": "Signing in..."
+        },
+        "createAccount": "Create account",
+        "forgotPassword": "Forgot password?"
+      },
+      "divider": "Or continue with",
+      "toast": {
+        "success": {
+          "title": "Success",
+          "description": "Successfully signed in"
+        },
+        "error": {
+          "title": "Authentication Error",
+          "default": "An unexpected error occurred"
+        }
+      }
+    },
+    "signup": {
+      "title": "Create an account",
+      "description": "Enter your information to get started",
+      "logo": {
+        "alt": "Gumroad Data Logo"
+      },
+      "form": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter your email",
+          "errors": {
+            "required": "Email is required",
+            "invalid": "Please enter a valid email address"
+          }
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Create a password",
+          "confirmLabel": "Confirm Password",
+          "confirmPlaceholder": "Confirm your password",
+          "errors": {
+            "required": "Password is required",
+            "minLength": "Password must be at least 8 characters",
+            "mismatch": "Passwords don't match"
+          }
+        }
+      },
+      "buttons": {
+        "submit": {
+          "default": "Create account",
+          "loading": "Creating..."
+        },
+        "signIn": "Sign in"
+      },
+      "divider": "Or continue with",
+      "toast": {
+        "success": {
+          "title": "Success",
+          "description": "Your account has been created successfully"
+        },
+        "error": {
+          "title": "Error",
+          "description": "Failed to create account",
+          "autoSignIn": "Automatic sign in failed"
+        }
+      }
+    }
   }
 }
