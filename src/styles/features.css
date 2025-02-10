@@ -1,0 +1,59 @@
+.features-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.features-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 1280px;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card {
+  width: 400px;
+  height: 300px;
+  gap: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.feature-icon-wrapper {
+  display: flex;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.75rem;
+}
+
+.feature-icon {
+  color: white;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.feature-description {
+  opacity: 0.8;
+}

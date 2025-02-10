@@ -4,6 +4,7 @@ import { currentLocaleAtom, currentLocaleInfoAtom } from "@/atoms/language";
 import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { languages } from "@/lib/locale";
+import "@/styles/language-switcher.css";
 import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { Globe } from "lucide-react";
@@ -38,24 +39,24 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="language-switcher">
       <Select value={currentLocale} onValueChange={handleLanguageChange} disabled={isChanging}>
-        <SelectTrigger className="w-[140px] h-9 bg-background/50 hover:bg-background/80 transition-colors duration-200 border-primary/20 hover:border-primary/40 rounded-full pl-3 pr-2">
-          <div className="flex items-center gap-2">
+        <SelectTrigger className="language-trigger">
+          <div className="language-trigger-content">
             <motion.div animate={{ rotate: isChanging ? 360 : 0 }} transition={{ duration: 1, repeat: isChanging ? Infinity : 0, ease: "linear" }}>
-              <Globe className="h-4 w-4 text-muted-foreground" />
+              <Globe className="language-icon" />
             </motion.div>
-            <motion.span className="text-sm font-medium" initial={false} animate={{ opacity: isChanging ? 0.5 : 1 }}>
+            <motion.span className="language-text" initial={false} animate={{ opacity: isChanging ? 0.5 : 1 }}>
               {currentLocaleInfo?.language}
             </motion.span>
           </div>
         </SelectTrigger>
-        <SelectContent className="min-w-[140px] bg-background/95 backdrop-blur-sm border-primary/20" align="end">
+        <SelectContent className="language-content" align="end">
           {languages.map((lang) => (
-            <SelectItem key={lang.lang} value={lang.lang} className="cursor-pointer hover:bg-primary/5 focus:bg-primary/5 transition-colors duration-200">
-              <motion.div className="flex items-center gap-2" initial={{ x: -10, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.2 }}>
-                <span className="text-base">{lang.lang}</span>
-                <span className="text-sm font-medium">{lang.language}</span>
+            <SelectItem key={lang.lang} value={lang.lang} className="language-item">
+              <motion.div className="language-item-content" initial={{ x: -10, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.2 }}>
+                <span className="language-code">{lang.lang}</span>
+                <span className="language-name">{lang.language}</span>
               </motion.div>
             </SelectItem>
           ))}
@@ -64,14 +65,14 @@ const LanguageSwitcher = () => {
 
       {/* Loading overlay */}
       <motion.div
-        className="absolute inset-0 rounded-full bg-background/10 backdrop-blur-sm flex items-center justify-center"
+        className="loading-overlay"
         initial={{ opacity: 0 }}
         animate={{ opacity: isChanging ? 1 : 0 }}
         transition={{ duration: 0.2 }}
         style={{ pointerEvents: isChanging ? "auto" : "none" }}
       >
         {isChanging && (
-          <motion.div className="w-4 h-4 border-2 border-primary border-t-transparent rounded-full" animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} />
+          <motion.div className="loading-spinner" animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} />
         )}
       </motion.div>
     </div>

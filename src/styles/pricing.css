@@ -1,0 +1,102 @@
+.pricing-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.pricing-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pricing-subtitle {
+  opacity: 0.5;
+}
+
+.pricing-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
+  width: 400px;
+}
+
+.pricing-card-highlighted {
+  background-color: black;
+  color: white;
+}
+
+.pricing-card-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pricing-plan-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+.pricing-badge {
+  color: black;
+}
+
+.pricing-price {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.pricing-period {
+  font-size: 0.875rem;
+  opacity: 0.5;
+}
+
+.pricing-button {
+  width: 100%;
+}
+
+.pricing-button-highlighted {
+  background-color: white;
+  color: black;
+}
+
+.pricing-features {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: start;
+}
+
+.pricing-feature {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pricing-feature-icon {
+  color: rgb(34, 197, 94);
+  margin-right: 0.5rem;
+}

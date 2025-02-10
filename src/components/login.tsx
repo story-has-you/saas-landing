@@ -4,9 +4,8 @@ import { GitHub, Google } from "@/components/icon";
 import { Button } from "@/components/ui/button";
 import { CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { DialogContent } from "@/components/ui/dialog";
+import "@/styles/login.css";
 import { useTranslations } from "next-intl";
-
-const CALLBACK_URL = "/playground";
 
 interface AuthProvider {
   id: "google" | "github";
@@ -33,15 +32,15 @@ const Login: React.FC = () => {
   return (
     <DialogContent>
       <CardHeader>
-        <CardTitle className="text-2xl">{t("cardTitle")}</CardTitle>
+        <CardTitle className="login-title">{t("cardTitle")}</CardTitle>
         <CardDescription>{t("cardDescription")}</CardDescription>
       </CardHeader>
 
       <CardContent>
-        <div className="grid gap-4">
+        <div className="login-content">
           {authProviders.map(({ id, icon: Icon }) => (
-            <Button key={id} variant="outline" className="w-full" onClick={() => handleSignIn(id)}>
-              <Icon className="w-4 h-4 mr-2" />
+            <Button key={id} variant="outline" className="login-button" onClick={() => handleSignIn(id)}>
+              <Icon className="login-provider-icon" />
               {t(`${id}LoginButton`)}
             </Button>
           ))}

@@ -2,6 +2,7 @@
 
 import { Logo } from "@/components/icon";
 import LanguageSwitcher from "@/components/language-switcher";
+import "@/styles/navbar.css";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
@@ -10,22 +11,22 @@ interface NavLink {
   text: string;
 }
 
-interface NavigationProps {
+interface NavBarProps {
   className?: string;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ className }) => {
+const NavBar: React.FC<NavBarProps> = ({ className }) => {
   const t = useTranslations("navigation");
   const links = t.raw("links") as NavLink[];
 
   return (
-    <nav className="flex flex-row justify-between items-center p-5 z-0">
-      <Logo className="w-5 h-5" />
+    <nav className={`navbar ${className || ''}`}>
+      <Logo className="navbar-logo" />
 
-      <div className="flex flex-row justify-center items-center overflow-hidden z-20 gap-5 rounded-none text-black">
+      <div className="navbar-links">
         {links.map((item) => (
           <div key={item.href}>
-            <Link href={item.href} target="_blank" className="opacity-60 hover:opacity-100 transition-opacity">
+            <Link href={item.href} target="_blank" className="navbar-link">
               {item.text}
             </Link>
           </div>
@@ -37,4 +38,4 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
   );
 };
 
-export default Navigation;
+export default NavBar;

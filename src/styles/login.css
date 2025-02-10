@@ -1,0 +1,22 @@
+.login-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.login-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.login-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-provider-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}

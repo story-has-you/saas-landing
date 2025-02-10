@@ -1,5 +1,6 @@
 import Providers from "@/components/providers";
 import { cn } from "@/lib/utils";
+import "@/styles/globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { getMessages } from "next-intl/server";
 import localFont from "next/font/local";

@@ -1,0 +1,41 @@
+.supplier-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.supplier-title {
+  opacity: 0.5;
+}
+
+.supplier-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.supplier-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 5rem;
+}
+
+.supplier-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.supplier-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+}

@@ -2,6 +2,7 @@
 
 import { Fonts } from "@/components/fonts";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import "@/styles/faq.css";
 import { useTranslations } from "next-intl";
 
 interface FAQItem {
@@ -14,22 +15,22 @@ const FAQ: React.FC = () => {
   const questions = t.raw("questions") as FAQItem[];
 
   return (
-    <div className="flex justify-center items-center w-full">
-      <div className="flex flex-col items-center justify-center w-full gap-14 py-14">
-        <div className="flex flex-col gap-5 text-center">
+    <div className="faq-container">
+      <div className="faq-wrapper">
+        <div className="faq-header">
           <Fonts.h2>{t("title")}</Fonts.h2>
-          <Fonts.bodyLarge className="opacity-50">{t("subtitle")}</Fonts.bodyLarge>
+          <Fonts.bodyLarge className="faq-subtitle">{t("subtitle")}</Fonts.bodyLarge>
         </div>
 
-        <div className="w-full md:w-2/3">
+        <div className="faq-content">
           <Accordion type="single" collapsible>
             {questions.map((item: FAQItem, index: number) => (
               <AccordionItem key={index} value={`item-${index}`}>
                 <AccordionTrigger>
                   <Fonts.h5>{item.question}</Fonts.h5>
                 </AccordionTrigger>
-                <AccordionContent className="w-full">
-                  <Fonts.bodyMedium className="text-start opacity-80">{item.answer}</Fonts.bodyMedium>
+                <AccordionContent>
+                  <Fonts.bodyMedium className="faq-answer">{item.answer}</Fonts.bodyMedium>
                 </AccordionContent>
               </AccordionItem>
             ))}

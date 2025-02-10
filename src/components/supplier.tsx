@@ -2,6 +2,7 @@
 
 import { Fonts } from "@/components/fonts";
 import Icons from "@/components/icon";
+import "@/styles/supplier.css";
 import { useTranslations } from "next-intl";
 
 interface Supplier {
@@ -21,9 +22,9 @@ const IconComponent: React.FC<IconComponentProps> = ({ name, className }) => {
 
 const SupplierItem: React.FC<{ supplier: Supplier }> = ({ supplier }) => {
   return (
-    <div className="flex flex-row justify-center items-center gap-2">
+    <div className="supplier-item">
       <IconComponent name={supplier.icon} />
-      <p className="text-sm font-bold">{supplier.name}</p>
+      <p className="supplier-name">{supplier.name}</p>
     </div>
   );
 };
@@ -33,11 +34,11 @@ const Supplier: React.FC = () => {
   const suppliers = t.raw("suppliers") as Supplier[];
 
   return (
-    <div className="flex flex-col gap-8 justify-center items-center w-full">
-      <Fonts.bodySmall className="opacity-50">{t("title")}</Fonts.bodySmall>
+    <div className="supplier-container">
+      <Fonts.bodySmall className="supplier-title">{t("title")}</Fonts.bodySmall>
 
-      <div className="flex flex-row opacity-50 w-full">
-        <div className="flex flex-row justify-center items-center w-full gap-20">
+      <div className="supplier-list-wrapper">
+        <div className="supplier-list">
           {suppliers.map((supplier) => (
             <SupplierItem key={supplier.name} supplier={supplier} />
           ))}

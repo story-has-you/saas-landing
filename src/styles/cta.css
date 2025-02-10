@@ -1,0 +1,37 @@
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  height: 450px;
+  background-color: hsla(132, 0%, 100%, 1);
+  background-image: 
+    radial-gradient(circle at 91% 11%, hsla(13, 100%, 88%, 0.66) 4.038772213247173%, transparent 37.2265767974114%),
+    radial-gradient(circle at 66% 37%, hsla(323, 100%, 88%, 1) 0%, transparent 63.33640956108327%),
+    radial-gradient(circle at 36% 87%, hsla(268, 100%, 88%, 1) 12.107536057085522%, transparent 63.33640956108327%);
+  background-blend-mode: normal, normal, normal;
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.cta-description {
+  max-width: 420px;
+}
+
+.cta-button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 9999px;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}

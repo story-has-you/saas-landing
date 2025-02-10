@@ -3,6 +3,7 @@
 import { Fonts } from "@/components/fonts";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import "@/styles/testimonials.css";
 import { useTranslations } from "next-intl";
 
 interface TestimonialUser {
@@ -76,19 +77,19 @@ const TESTIMONIAL_USERS: TestimonialUser[] = [
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ content, user }) => {
   return (
-    <Card className="w-[400px] gap-2 shadow-lg">
-      <CardContent className="p-10">
+    <Card className="testimonial-card">
+      <CardContent className="testimonial-content">
         <Fonts.bodyMedium>{content}</Fonts.bodyMedium>
       </CardContent>
       <CardFooter>
-        <div className="flex items-center gap-4 mt-2">
-          <Avatar className="hidden h-9 w-9 sm:flex">
+        <div className="testimonial-footer">
+          <Avatar className="testimonial-avatar">
             <AvatarImage src={user.avatar} alt={`${user.name}'s avatar`} />
             <AvatarFallback>{user.avatarFallback}</AvatarFallback>
           </Avatar>
-          <div className="grid gap-1">
-            <p className="text-sm font-medium leading-none">{user.name}</p>
-            <p className="text-sm text-muted-foreground">{user.account}</p>
+          <div className="testimonial-user-info">
+            <p className="testimonial-user-name">{user.name}</p>
+            <p className="testimonial-user-account">{user.account}</p>
           </div>
         </div>
       </CardFooter>
@@ -108,7 +109,7 @@ const TestimonialColumn: React.FC<{
   };
 
   return (
-    <div className="flex-col items-center justify-center flex-wrap space-y-5">
+    <div className="testimonial-column">
       {testimonials.map((content, index) => (
         <TestimonialCard key={startIndex + index} content={content} user={TESTIMONIAL_USERS[startIndex + index] ?? defaultUser} />
       ))}
@@ -126,13 +127,13 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <div className="w-full flex flex-col gap-16 items-center justify-center">
-      <div className="flex flex-col gap-5">
+    <div className="testimonials-container">
+      <div className="testimonials-header">
         <Fonts.h2>{t("title")}</Fonts.h2>
-        <Fonts.bodyLarge className="opacity-50 max-w-[700px]">{t("description")}</Fonts.bodyLarge>
+        <Fonts.bodyLarge className="testimonials-description">{t("description")}</Fonts.bodyLarge>
       </div>
 
-      <div className="w-full flex flex-row justify-center gap-4">
+      <div className="testimonials-grid">
         {[0, 1, 2].map((columnIndex) => (
           <TestimonialColumn key={columnIndex} testimonials={getColumnTestimonials(columnIndex)} startIndex={columnIndex * 3} />
         ))}
