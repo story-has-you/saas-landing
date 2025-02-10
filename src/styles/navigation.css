@@ -1,0 +1,15 @@
+.navigation {
+  @apply flex flex-row justify-between items-center p-5 z-0;
+}
+
+.navigation__logo {
+  @apply w-5 h-5;
+}
+
+.navigation__links {
+  @apply flex flex-row justify-center items-center overflow-hidden z-20 gap-5 rounded-none text-black;
+}
+
+.navigation__link {
+  @apply opacity-60 hover:opacity-100 transition-opacity;
+}

@@ -1,0 +1,24 @@
+
+.faq-container {
+  @apply flex justify-center items-center w-full;
+}
+
+.faq-inner {
+  @apply flex flex-col items-center justify-center w-full gap-14 py-14;
+}
+
+.faq-header {
+  @apply flex flex-col gap-5 text-center;
+}
+
+.faq-subtitle {
+  @apply opacity-50;
+}
+
+.faq-content {
+  @apply w-full md:w-2/3;
+}
+
+.faq-answer {
+  @apply text-start opacity-80;
+}

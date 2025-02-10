@@ -1,7 +1,7 @@
 import Icons from "@/components/icon";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { cn } from "@/lib/utils";
+import "@/styles/oauth-providers.css";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -72,7 +72,7 @@ const OAuthProviders = ({ callbackUrl = "/" }: OAuthProvidersProps) => {
   };
 
   return (
-    <motion.div className="grid grid-cols-1 gap-4" variants={container} initial="hidden" animate="show">
+    <motion.div className="oauth-providers-container" variants={container} initial="hidden" animate="show">
       {providers.map((provider) => {
         const Icon = Icons[provider.icon];
         const providerName = t(`providers.${provider.translationKey}`);
@@ -81,20 +81,20 @@ const OAuthProviders = ({ callbackUrl = "/" }: OAuthProvidersProps) => {
           <motion.div key={provider.id} variants={item} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="relative">
             <Button
               variant="outline"
-              className={cn("w-full h-14 relative overflow-hidden group", "border-2 hover:border-primary/50", "transition-all duration-300")}
+              className="oauth-provider-button"
               onClick={() => handleOAuthSignIn(provider)}
               type="button"
             >
-              <div className="absolute inset-0 w-full h-full">
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent transition-opacity duration-500" />
+              <div className="oauth-provider-gradient">
+                <div className="oauth-provider-gradient-overlay" />
               </div>
 
-              <div className="relative flex items-center justify-center">
-                <Icon className="mr-3 h-5 w-5" aria-hidden="true" />
+              <div className="oauth-provider-content">
+                <Icon className="oauth-provider-icon" aria-hidden="true" />
                 <span className="text-base font-medium">{t("continue", { provider: providerName })}</span>
               </div>
 
-              <div className="absolute right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="oauth-provider-arrow">
                 <ArrowRight className="w-5 h-5" />
               </div>
             </Button>

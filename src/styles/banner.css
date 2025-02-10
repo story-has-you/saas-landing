@@ -1,0 +1,11 @@
+.banner-container {
+  @apply top-0 left-0 w-full h-[46px] flex flex-row justify-center items-center bg-black p-0 gap-5;
+}
+
+.banner-content {
+  @apply flex flex-row justify-center items-center overflow-visible p-0 gap-5 rounded-none;
+}
+
+.banner-text {
+  @apply whitespace-pre font-bold text-white text-center text-sm leading-none tracking-normal font-sans;
+}

@@ -2,6 +2,7 @@
 
 import { Logo } from "@/components/icon";
 import LanguageSwitcher from "@/components/language-switcher";
+import "@/styles/navigation.css";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
@@ -19,13 +20,13 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
   const links = t.raw("links") as NavLink[];
 
   return (
-    <nav className="flex flex-row justify-between items-center p-5 z-0">
-      <Logo className="w-5 h-5" />
+    <nav className="navigation">
+      <Logo className="navigation__logo" />
 
-      <div className="flex flex-row justify-center items-center overflow-hidden z-20 gap-5 rounded-none text-black">
+      <div className="navigation__links">
         {links.map((item) => (
           <div key={item.href}>
-            <Link href={item.href} target="_blank" className="opacity-60 hover:opacity-100 transition-opacity">
+            <Link href={item.href} target="_blank" className="navigation__link">
               {item.text}
             </Link>
           </div>

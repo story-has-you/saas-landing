@@ -1,0 +1,21 @@
+.cta-container {
+  @apply flex flex-col justify-center items-center w-full gap-8 h-[450px];
+  background-color: hsla(132, 0%, 100%, 1);
+  background-image: 
+    radial-gradient(circle at 91% 11%, hsla(13, 100%, 88%, 0.66) 4.038772213247173%, transparent 37.2265767974114%),
+    radial-gradient(circle at 66% 37%, hsla(323, 100%, 88%, 1) 0%, transparent 63.33640956108327%),
+    radial-gradient(circle at 36% 87%, hsla(268, 100%, 88%, 1) 12.107536057085522%, transparent 63.33640956108327%);
+  background-blend-mode: normal, normal, normal;
+}
+
+.cta-content {
+  @apply flex flex-col items-center gap-5;
+}
+
+.cta-description {
+  @apply max-w-[420px];
+}
+
+.cta-button {
+  @apply px-8 rounded-full hover:scale-105 transition-transform;
+}

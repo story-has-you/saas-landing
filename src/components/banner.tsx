@@ -2,14 +2,15 @@
 
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import "@/styles/banner.css";
 import { useTranslations } from "next-intl";
 
 const Banner: React.FC = () =>{
   const t = useTranslations("banner");
   return (
-    <div className="top-0 left-0 w-full h-[46px] flex flex-row justify-center items-center bg-black p-0 gap-5">
-      <div className="flex flex-row justify-center items-center overflow-visible p-0 gap-5 rounded-none">
-        <div className="whitespace-pre font-bold font-satoshi text-white text-center text-sm leading-none tracking-normal font-sans">{t("notificationText")}</div>
+    <div className="banner-container">
+      <div className="banner-content">
+        <div className="banner-text">{t("notificationText")}</div>
         <div>
           <Dialog>
             <DialogTrigger asChild>

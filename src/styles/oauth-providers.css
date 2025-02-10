@@ -1,0 +1,29 @@
+.oauth-providers-container {
+  @apply grid grid-cols-1 gap-4;
+}
+
+.oauth-provider-button {
+  @apply w-full h-14 relative overflow-hidden group;
+  @apply border-2 hover:border-primary/50;
+  @apply transition-all duration-300;
+}
+
+.oauth-provider-gradient {
+  @apply absolute inset-0 w-full h-full;
+}
+
+.oauth-provider-gradient-overlay {
+  @apply absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent transition-opacity duration-500;
+}
+
+.oauth-provider-content {
+  @apply relative flex items-center justify-center;
+}
+
+.oauth-provider-icon {
+  @apply mr-3 h-5 w-5;
+}
+
+.oauth-provider-arrow {
+  @apply absolute right-4 opacity-0 group-hover:opacity-100 transition-opacity;
+}

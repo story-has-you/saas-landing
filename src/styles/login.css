@@ -1,0 +1,15 @@
+.login-title {
+  @apply text-2xl;
+}
+
+.login-buttons-container {
+  @apply grid gap-4;
+}
+
+.login-button {
+  @apply w-full;
+}
+
+.login-button-icon {
+  @apply w-4 h-4 mr-2;
+}

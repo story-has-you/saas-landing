@@ -2,6 +2,7 @@
 
 import { Fonts } from "@/components/fonts";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import "@/styles/features.css";
 import { motion } from "framer-motion";
 import { Zap } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -36,13 +37,13 @@ const Features: React.FC = () => {
   const cards = t.raw("cards") as FeatureCard[];
 
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-16">
-      <div className="flex flex-col justify-center items-center gap-8">
+    <div className="features-container">
+      <div className="features-header">
         <Fonts.h2>{t("title")}</Fonts.h2>
       </div>
 
       <motion.ul
-        className="flex flex-wrap gap-5 w-full max-w-[1280px] items-center justify-center"
+        className="features-list"
         variants={container}
         initial="hidden"
         animate="visible"
@@ -51,15 +52,15 @@ const Features: React.FC = () => {
       >
         {cards.map((card: FeatureCard, index: number) => (
           <motion.li variants={item} key={index}>
-            <Card className="w-[400px] h-[300px] gap-4 shadow-lg">
+            <Card className="feature-card">
               <CardHeader className="justify-center items-center">
-                <div className="flex w-14 h-14 bg-black justify-center items-center rounded-xl">
-                  <Zap className="text-white w-7 h-7" />
+                <div className="feature-icon-wrapper">
+                  <Zap className="feature-icon" />
                 </div>
               </CardHeader>
-              <CardContent className="space-y-2">
+              <CardContent className="feature-content">
                 <Fonts.h5>{card.title}</Fonts.h5>
-                <Fonts.bodyMedium className="opacity-80">{card.description}</Fonts.bodyMedium>
+                <Fonts.bodyMedium className="feature-description">{card.description}</Fonts.bodyMedium>
               </CardContent>
             </Card>
           </motion.li>

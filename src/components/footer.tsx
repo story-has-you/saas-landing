@@ -1,5 +1,6 @@
 "use client";
 
+import "@/styles/footer.css";
 import { X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -14,11 +15,11 @@ const Footer: React.FC = () => {
 
     return (
       <div key={groupName}>
-        <h3 className="text-white font-semibold mb-3">{t(`${groupName}.title`)}</h3>
-        <ul className="space-y-2">
+        <h3 className="footer-group-title">{t(`${groupName}.title`)}</h3>
+        <ul className="footer-link-list">
           {items.map((item: string, index: number) => (
             <li key={index}>
-              <Link href="#" className="hover:text-white transition-colors">
+              <Link href="#" className="footer-link">
                 {item}
               </Link>
             </li>
@@ -29,23 +30,23 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-black text-gray-400 py-12 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between">
+    <footer className="footer">
+      <div className="footer-container">
         {/* Logo and Description */}
-        <div className="mb-8 md:mb-0 md:w-1/3">
-          <div className="w-12 h-12 mb-4 bg-purple-600 rounded-lg flex items-center justify-center">
-            <div className="w-8 h-8 bg-white rounded transform rotate-45" />
+        <div className="footer-logo-section">
+          <div className="footer-logo">
+            <div className="footer-logo-inner" />
           </div>
-          <p className="text-sm max-w-xs">{t("description")}</p>
+          <p className="footer-description">{t("description")}</p>
         </div>
 
         {/* Link Groups */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:w-2/3">{linkGroups.map(renderLinkGroup)}</div>
+        <div className="footer-links-grid">{linkGroups.map(renderLinkGroup)}</div>
       </div>
 
       {/* Social Media Icons */}
-      <div className="mt-12 flex justify-center space-x-6">
-        <Link href="#" className="text-gray-400 hover:text-white">
+      <div className="footer-social">
+        <Link href="#" className="footer-social-link">
           <span className="sr-only">{t("socialMedia.x")}</span>
           <X className="h-6 w-6" />
         </Link>

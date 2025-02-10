@@ -1,0 +1,31 @@
+.features-container {
+  @apply w-full flex flex-col justify-center items-center gap-16;
+}
+
+.features-header {
+  @apply flex flex-col justify-center items-center gap-8;
+}
+
+.features-list {
+  @apply flex flex-wrap gap-5 w-full max-w-[1280px] items-center justify-center;
+}
+
+.feature-card {
+  @apply w-[400px] h-[300px] gap-4 shadow-lg;
+}
+
+.feature-icon-wrapper {
+  @apply flex w-14 h-14 bg-black justify-center items-center rounded-xl;
+}
+
+.feature-icon {
+  @apply text-white w-7 h-7;
+}
+
+.feature-content {
+  @apply space-y-2;
+}
+
+.feature-description {
+  @apply opacity-80;
+}

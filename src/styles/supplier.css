@@ -1,0 +1,23 @@
+.supplier-container {
+  @apply flex flex-col gap-8 justify-center items-center w-full;
+}
+
+.supplier-title {
+  @apply opacity-50;
+}
+
+.supplier-list-wrapper {
+  @apply flex flex-row opacity-50 w-full;
+}
+
+.supplier-list {
+  @apply flex flex-row justify-center items-center w-full gap-20;
+}
+
+.supplier-item {
+  @apply flex flex-row justify-center items-center gap-2;
+}
+
+.supplier-item-text {
+  @apply text-sm font-bold;
+}

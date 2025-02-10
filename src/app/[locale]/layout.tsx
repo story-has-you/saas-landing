@@ -1,5 +1,6 @@
 import Providers from "@/components/providers";
 import { cn } from "@/lib/utils";
+import "@/styles/globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { getMessages } from "next-intl/server";
 import localFont from "next/font/local";
@@ -15,15 +16,14 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-
 interface PageLayoutProps {
   children: React.ReactNode;
-  params: any
+  params: any;
 }
 
 export default async function PageLayout({ children, params }: Readonly<PageLayoutProps>) {
   const messages = await getMessages();
-  const { locale } = await params
+  const { locale } = await params;
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={cn("min-h-screen bg-background antialiased", geistSans.variable, geistMono.variable)}>
