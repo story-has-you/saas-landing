@@ -50,14 +50,14 @@
 
 .hero-image-main {
   position: absolute;
-  left: 33.333333%;
+  left: 40%;
   max-width: 600px;
 }
 
 .hero-image-top {
   position: absolute;
   top: 8rem;
-  left: 16rem;
+  left: 20rem;
   z-index: 10;
 }
 
