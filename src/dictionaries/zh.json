@@ -6,24 +6,20 @@
   "navigation": {
     "links": [
       {
-        "text": "关于我们",
-        "href": "/about"
+        "text": "核心功能",
+        "href": "#features"
       },
       {
-        "text": "功能特性",
-        "href": "/features"
+        "text": "用户评价",
+        "href": "#testimonials"
       },
       {
-        "text": "客户案例",
-        "href": "/customers"
+        "text": "定价方案",
+        "href": "#pricing"
       },
       {
-        "text": "最新动态",
-        "href": "/updates"
-      },
-      {
-        "text": "帮助中心",
-        "href": "/help"
+        "text": "常见问题",
+        "href": "#faq"
       }
     ],
     "buttonText": "免费获取",

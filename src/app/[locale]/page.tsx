@@ -30,19 +30,37 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
 export default async function HomePage() {
   return (
     <div className="absolute w-full flex flex-col">
-      <Banner />
+      <div id="banner">
+        <Banner />
+      </div>
       <div style={Constants.BACKGROUND_STYLE}>
-        <NavBar />
-        <Hero />
+        <div id="nav">
+          <NavBar />
+        </div>
+        <div id="hero">
+          <Hero />
+        </div>
       </div>
       <div className="w-full mt-20 flex flex-col space-y-32">
-        <Features />
-        <Testimonials />
-        <Pricing />
-        <FAQ />
+        <div id="features">
+          <Features />
+        </div>
+        <div id="testimonials">
+          <Testimonials />
+        </div>
+        <div id="pricing">
+          <Pricing />
+        </div>
+        <div id="faq">
+          <FAQ />
+        </div>
       </div>
-      <CTA />
-      <Footer />
+      <div id="cta">
+        <CTA />
+      </div>
+      <div id="footer">
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -6,24 +6,20 @@
   "navigation": {
     "links": [
       {
-        "text": "About",
-        "href": "/about"
-      },
-      {
         "text": "Features",
-        "href": "/features"
+        "href": "#features"
       },
       {
-        "text": "Customers",
-        "href": "/customers"
+        "text": "Testimonials",
+        "href": "#testimonials"
       },
       {
-        "text": "Updates",
-        "href": "/updates"
+        "text": "Pricing",
+        "href": "#pricing"
       },
       {
-        "text": "Help",
-        "href": "/help"
+        "text": "FAQ",
+        "href": "#faq"
       }
     ],
     "buttonText": "Get for free",

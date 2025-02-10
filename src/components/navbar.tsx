@@ -26,7 +26,7 @@ const NavBar: React.FC<NavBarProps> = ({ className }) => {
       <div className="navbar-links">
         {links.map((item) => (
           <div key={item.href}>
-            <Link href={item.href} target="_blank" className="navbar-link">
+            <Link href={item.href} className="navbar-link">
               {item.text}
             </Link>
           </div>
